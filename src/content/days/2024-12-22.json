@@ -1,0 +1,86 @@
+{
+  "day": 22,
+  "date": "2024-12-22",
+  "prizes": [
+    {
+      "numbers": [
+        "0081",
+        "1230",
+        "1324",
+        "1511",
+        "1743"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0219",
+        "0847"
+      ],
+      "prize": "Gutschein Kaffeeseminar",
+      "sponsor": "Becking Kaffeemanufaktur",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0153",
+        "0268",
+        "0723",
+        "1051",
+        "1173"
+      ],
+      "prize": "Spielzeug-Gutschein €10,-",
+      "sponsor": "Hartfelder Spielzeug GmbH",
+      "logo": "Hartfelder-Spiel-Logo_2x.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0163",
+        "0210"
+      ],
+      "prize": "2 Koffergurte",
+      "sponsor": "Haspa Ottensen",
+      "logo": "35_HASPA-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0224",
+        "1463"
+      ],
+      "prize": "Rucksack",
+      "sponsor": "Haspa Ottensen",
+      "logo": "35_HASPA-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0468",
+        "0572",
+        "1162"
+      ],
+      "prize": "Schirm",
+      "sponsor": "Haspa Ottensen",
+      "logo": "35_HASPA-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0060",
+        "1087",
+        "1263",
+        "1411",
+        "1714"
+      ],
+      "prize": "Gutschein",
+      "sponsor": "Meet Me In The Morning",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

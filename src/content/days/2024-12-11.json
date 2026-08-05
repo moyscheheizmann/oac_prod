@@ -1,0 +1,67 @@
+{
+  "day": 11,
+  "date": "2024-12-11",
+  "prizes": [
+    {
+      "numbers": [
+        "0135",
+        "0687",
+        "1178",
+        "1313",
+        "1729"
+      ],
+      "prize": "€10,- Gut.",
+      "sponsor": "Blaue Blume",
+      "logo": "Blaue-Blume_Logo.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0779",
+        "0950",
+        "1744"
+      ],
+      "prize": "ein Gutschein im Wert von 30 Euro",
+      "sponsor": "Buchhandlung Christiansen",
+      "logo": "18_BuchhandlungChristiansen-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0063",
+        "0793",
+        "1100",
+        "1238",
+        "1311"
+      ],
+      "prize": "ein Gutschein im Wert von 10 Euro",
+      "sponsor": "Kernenergie",
+      "logo": "Kernenergie_Logo.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0294",
+        "1467",
+        "1513"
+      ],
+      "prize": "Gutschein a 50 Eur",
+      "sponsor": "Krupka Schuhe",
+      "logo": "33_KrupkaSchuhe-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0272",
+        "1058",
+        "1392",
+        "1522",
+        "1769"
+      ],
+      "prize": "2 Frühstücksbrettchen",
+      "sponsor": "Tischlerei Paepcke",
+      "logo": "28_Paepcke-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

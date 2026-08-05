@@ -1,0 +1,68 @@
+{
+  "day": 10,
+  "date": "2024-12-10",
+  "prizes": [
+    {
+      "numbers": [
+        "0518",
+        "0889",
+        "1021",
+        "1161",
+        "1635"
+      ],
+      "prize": "Gutschein",
+      "sponsor": "Eisprinzessinnen",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0019",
+        "1019",
+        "1399",
+        "1418",
+        "1762"
+      ],
+      "prize": "bunte Motivsocken",
+      "sponsor": "Marlowe Nature",
+      "logo": "51_Marlowe-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1541",
+        "1691"
+      ],
+      "prize": "eine Überraschung im Wert von 10-50 Euro",
+      "sponsor": "Salima Kinderschätze",
+      "logo": "32_Salima-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0032",
+        "0046",
+        "0525",
+        "0804",
+        "0854"
+      ],
+      "prize": "2 Eintrittskarten",
+      "sponsor": "Zeise Kinos",
+      "logo": "48_ZeiseKinos.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0445",
+        "0610",
+        "0666",
+        "1022",
+        "1461"
+      ],
+      "prize": "Brotbeutel und Honig",
+      "sponsor": "Zeit für Brot",
+      "logo": "a5648f6517c14d9fde1d67566a8ad970.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

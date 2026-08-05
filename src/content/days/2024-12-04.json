@@ -1,0 +1,75 @@
+{
+  "day": 4,
+  "date": "2024-12-04",
+  "prizes": [
+    {
+      "numbers": [
+        "0040",
+        "0639",
+        "1268"
+      ],
+      "prize": "Gutschein Kaffeeseminar",
+      "sponsor": "Becking Kaffeemanufaktur",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0360",
+        "1229"
+      ],
+      "prize": "ein Gutschein im Wert von 30 Euro",
+      "sponsor": "Buchhandlung Christiansen",
+      "logo": "18_BuchhandlungChristiansen-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0706",
+        "0881",
+        "1163",
+        "1351",
+        "1728"
+      ],
+      "prize": "Gutschein 10 im Wert von 10 Euro",
+      "sponsor": "Süd-Nord Kontor",
+      "logo": "57_SüdNordKontor-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0290",
+        "0417",
+        "0630",
+        "0933",
+        "1176",
+        "1374"
+      ],
+      "prize": "Weihnachtsbaum",
+      "sponsor": "TriBühne e.V.",
+      "logo": "image001.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0604"
+      ],
+      "prize": "Brotbeutel und Brot Honig",
+      "sponsor": "Zeit für Brot",
+      "logo": "a5648f6517c14d9fde1d67566a8ad970.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0878",
+        "1304",
+        "1345",
+        "1680"
+      ],
+      "prize": "Brotbeutel und Honig",
+      "sponsor": "Zeit für Brot",
+      "logo": "a5648f6517c14d9fde1d67566a8ad970.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

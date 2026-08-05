@@ -1,0 +1,103 @@
+{
+  "day": 23,
+  "date": "2024-12-23",
+  "prizes": [
+    {
+      "numbers": [
+        "0160",
+        "0882",
+        "0990",
+        "1012",
+        "1382"
+      ],
+      "prize": "Kaffee 1 kg 30€",
+      "sponsor": "Carroux Kaffeerösterei",
+      "logo": "07_Carroux-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0895",
+        "1146",
+        "1251",
+        "1262",
+        "1473"
+      ],
+      "prize": "Gutschein für zwei Heißgetränke",
+      "sponsor": "el rojito",
+      "logo": "logo.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1293"
+      ],
+      "prize": "10x Sternchenkerze von famosechos",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0612",
+        "1086"
+      ],
+      "prize": "Beton-Deko-Stern mit Band von famosechose",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0798",
+        "1299"
+      ],
+      "prize": "Motivschälchen",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0196",
+        "1574"
+      ],
+      "prize": "Herzschälchen",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1332"
+      ],
+      "prize": "2 Theaterkarten \"Kleiner Störtebeker\"",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0702",
+        "1359"
+      ],
+      "prize": "2 Theaterkarten \"Kleiner Störtebeker\"",
+      "sponsor": "Schmidts Tivoli",
+      "logo": "36_SchmidtsTivoli-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0902",
+        "1003",
+        "1457",
+        "1648",
+        "1694"
+      ],
+      "prize": "Bücherpaket",
+      "sponsor": "Thalia Buchhandlung",
+      "logo": "Thalia_logo.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

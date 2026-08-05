@@ -1,0 +1,69 @@
+{
+  "day": 20,
+  "date": "2024-12-20",
+  "prizes": [
+    {
+      "numbers": [
+        "0037",
+        "0184",
+        "0231",
+        "0387",
+        "0415",
+        "0683",
+        "0742",
+        "0862",
+        "1014"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0161",
+        "1363"
+      ],
+      "prize": "Gutschein im Wert von 6 Euro",
+      "sponsor": "Café June",
+      "logo": "Unknown-2.jpeg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0759",
+        "1016",
+        "1076",
+        "1222",
+        "1223"
+      ],
+      "prize": "Kaffee 1 kg 30€",
+      "sponsor": "Carroux Kaffeerösterei",
+      "logo": "07_Carroux-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0048",
+        "0053",
+        "0880",
+        "1164",
+        "1616"
+      ],
+      "prize": "Kirschkernkissen",
+      "sponsor": "Louie`s grünepflaume",
+      "logo": "25_LouisesGruenePflaume-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0315",
+        "1121"
+      ],
+      "prize": "2 Eintrittskarte für 2 Erwachsenen",
+      "sponsor": "Miniatur Wunderland",
+      "logo": "59_MiniaturWunderland-1.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

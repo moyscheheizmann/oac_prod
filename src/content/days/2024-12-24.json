@@ -1,0 +1,72 @@
+{
+  "day": 24,
+  "date": "2024-12-24",
+  "prizes": [
+    {
+      "numbers": [
+        "1628"
+      ],
+      "prize": "2 Karten für Harry Potter und das verwunschene Kind",
+      "sponsor": "Mehr! Theater Hamburg",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0098",
+        "0526",
+        "0543",
+        "0743",
+        "0823",
+        "0989",
+        "1235",
+        "1244",
+        "1391",
+        "6797"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0523",
+        "1040",
+        "1343",
+        "1699",
+        "1759"
+      ],
+      "prize": "Gutschein á 8 EUR",
+      "sponsor": "Die Pâtisserie",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0451",
+        "1095",
+        "1165",
+        "1216",
+        "1659"
+      ],
+      "prize": "2 Frühstücksbrettchen",
+      "sponsor": "Tischlerei Paepcke",
+      "logo": "28_Paepcke-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0127",
+        "0175",
+        "0255",
+        "0576",
+        "1303"
+      ],
+      "prize": "2 Eintrittskarten",
+      "sponsor": "Zeise Kinos",
+      "logo": "48_ZeiseKinos.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

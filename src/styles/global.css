@@ -1,0 +1,42 @@
+@import "@fontsource/kalam/400.css";
+@import "@fontsource/kalam/700.css";
+@import "@fontsource/arimo/400.css";
+@import "@fontsource/arimo/400-italic.css";
+@import "@fontsource/arimo/700.css";
+@import "tailwindcss";
+
+/*
+ * Design tokens for the Ottenser Adventskalender.
+ *
+ * Palette and typography follow the 2026 redesign mockups
+ * (assets/img/front.jpeg, assets/img/tuerchen.jpeg). Kalam and Arimo are
+ * carried over from the previous theme, so the lettering stays familiar.
+ */
+@theme {
+  --color-oac-navy: #1f3c8e;
+  --color-oac-cyan: #29a9dd;
+  --color-oac-red: #d22b25;
+  --color-oac-orange: #f0a340;
+
+  --color-oac-paper: #f0f0ef;
+  --color-oac-sky: #bfe4f6;
+  --color-oac-ink: #333333;
+
+  --font-display: "Kalam", ui-rounded, cursive;
+  --font-sans: "Arimo", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-oac-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

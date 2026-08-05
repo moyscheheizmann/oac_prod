@@ -1,0 +1,79 @@
+{
+  "day": 8,
+  "date": "2024-12-08",
+  "prizes": [
+    {
+      "numbers": [
+        "0412",
+        "0628",
+        "1319",
+        "1416",
+        "1451"
+      ],
+      "prize": "Spielzeug-Gutschein €10,-",
+      "sponsor": "Hartfelder Spielzeug GmbH",
+      "logo": "Hartfelder-Spiel-Logo_2x.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0193",
+        "0783",
+        "1132",
+        "1273",
+        "1546"
+      ],
+      "prize": "Fish & Chips",
+      "sponsor": "HAVN Copenhagen Streetfood",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0691",
+        "0714",
+        "0898"
+      ],
+      "prize": "Pflegeset",
+      "sponsor": "Kaiser-Apotheke",
+      "logo": "17_KaiserApotheke-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0007",
+        "0599",
+        "0632",
+        "0700",
+        "0980"
+      ],
+      "prize": "Kirschkernkissen",
+      "sponsor": "Louie`s grünepflaume",
+      "logo": "25_LouisesGruenePflaume-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0259",
+        "0968"
+      ],
+      "prize": "Circusworkshop für Kinder 1 Platz 90,00 Euro",
+      "sponsor": "TriBühne e.V.",
+      "logo": "image001.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0152",
+        "0266",
+        "0967",
+        "1501",
+        "1602"
+      ],
+      "prize": "10 Tage Probemitgliedschaft",
+      "sponsor": "Zanshin Dojo",
+      "logo": "30_ZanshinDojo-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

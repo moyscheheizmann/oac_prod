@@ -1,0 +1,97 @@
+{
+  "day": 15,
+  "date": "2024-12-15",
+  "prizes": [
+    {
+      "numbers": [
+        "0084",
+        "0141",
+        "0187",
+        "0326",
+        "0494",
+        "0596",
+        "0719",
+        "0826",
+        "0841",
+        "1153",
+        "1217",
+        "1542"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0720",
+        "0899",
+        "1254",
+        "1257",
+        "1713"
+      ],
+      "prize": "20 € Gutschein",
+      "sponsor": "Café 44qm",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1002",
+        "1555"
+      ],
+      "prize": "BaseCap €30,-",
+      "sponsor": "isociety",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1440"
+      ],
+      "prize": "Poster nach Wahl von Käselotti",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0708"
+      ],
+      "prize": "Poster nach Wahl von Jaegerschnipsel",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1215",
+        "1352"
+      ],
+      "prize": "Pappbilder-Buch \"Miau\" von Käselotti",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0072",
+        "0209",
+        "0263"
+      ],
+      "prize": "Tannen-Kerze von famosechose",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0830"
+      ],
+      "prize": "1 x 2 Std. Health Kinesiologie zum Thema „Entspannt durch stressige Zeiten“",
+      "sponsor": "Susann Boening, Heilpraktikerin",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

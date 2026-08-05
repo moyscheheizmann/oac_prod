@@ -1,0 +1,79 @@
+{
+  "day": 9,
+  "date": "2024-12-09",
+  "prizes": [
+    {
+      "numbers": [
+        "0094",
+        "0391",
+        "0713",
+        "1036",
+        "1139"
+      ],
+      "prize": "Eintrittskarte Fussballspiel",
+      "sponsor": "Altona 93",
+      "logo": "1200px-Altona_93.svg_.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0017",
+        "0070",
+        "0515",
+        "0638",
+        "0957",
+        "1059",
+        "1203",
+        "1472",
+        "1662"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0778",
+        "1253",
+        "1274",
+        "1676",
+        "1756"
+      ],
+      "prize": "Gutschein",
+      "sponsor": "Hafenmeisterei",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0797"
+      ],
+      "prize": "Restaurant-Gutschein im Wert von 30€",
+      "sponsor": "Restaurant Engel",
+      "logo": "26_RestaurantEngel.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0874",
+        "0987",
+        "1265",
+        "1326"
+      ],
+      "prize": "Gutschein 10 im Wert von 10 Euro",
+      "sponsor": "Süd-Nord Kontor",
+      "logo": "57_SüdNordKontor-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1681"
+      ],
+      "prize": "Schokoladenpaket",
+      "sponsor": "Süd-Nord Kontor",
+      "logo": "57_SüdNordKontor-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "day": 14,
+  "date": "2024-12-14",
+  "prizes": [
+    {
+      "numbers": [
+        "0690",
+        "0790",
+        "0975",
+        "1106",
+        "1462"
+      ],
+      "prize": "Kaffee 1 kg 30€",
+      "sponsor": "Carroux Kaffeerösterei",
+      "logo": "07_Carroux-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0368",
+        "0750"
+      ],
+      "prize": "2 Eintrittskarten für das Opernloft Hamburg",
+      "sponsor": "Opernloft im alten Fährterminal",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0735",
+        "1011",
+        "1408",
+        "1557",
+        "1702"
+      ],
+      "prize": "eine Überraschung im Wert von 10-50 Euro",
+      "sponsor": "Salima Kinderschätze",
+      "logo": "32_Salima-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0337",
+        "0614",
+        "1413",
+        "1455",
+        "1765"
+      ],
+      "prize": "Schokoladenpaket",
+      "sponsor": "Süd-Nord Kontor",
+      "logo": "57_SüdNordKontor-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0054",
+        "0937"
+      ],
+      "prize": "Circusworkshop für Kinder 1 Platz 90,00 Euro",
+      "sponsor": "TriBühne e.V.",
+      "logo": "image001.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0170",
+        "0442",
+        "0457",
+        "0731",
+        "1067",
+        "1433"
+      ],
+      "prize": "1 Gutschein Im Wert von 10€",
+      "sponsor": "Wohngeschwister Ottensen",
+      "logo": "images.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

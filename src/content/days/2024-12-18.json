@@ -1,0 +1,79 @@
+{
+  "day": 18,
+  "date": "2024-12-18",
+  "prizes": [
+    {
+      "numbers": [
+        "0199",
+        "0332",
+        "0768",
+        "0917",
+        "0932",
+        "0951",
+        "1028",
+        "1220",
+        "1385",
+        "1548"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0644"
+      ],
+      "prize": "Kissen Narkissos I",
+      "sponsor": "COCO-MAT",
+      "logo": "23_CocoMat-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1091",
+        "1327"
+      ],
+      "prize": "weihnachtliche Tür-/Tischkränze aus Messing (wiederverwendbar)",
+      "sponsor": "Das Friedchen",
+      "logo": "53_Friedchen.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0025",
+        "0529",
+        "0569",
+        "0982",
+        "1526"
+      ],
+      "prize": "Gutschein 6 Eiskugeln",
+      "sponsor": "Eisliebe",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0117",
+        "0971"
+      ],
+      "prize": "Pflegeset",
+      "sponsor": "Kaiser-Apotheke",
+      "logo": "17_KaiserApotheke-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0186",
+        "0281",
+        "0420",
+        "0993",
+        "1529"
+      ],
+      "prize": "2 Frühstücksbrettchen",
+      "sponsor": "Tischlerei Paepcke",
+      "logo": "28_Paepcke-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

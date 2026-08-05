@@ -1,0 +1,70 @@
+{
+  "day": 2,
+  "date": "2024-12-02",
+  "prizes": [
+    {
+      "numbers": [
+        "0342",
+        "0436",
+        "0484",
+        "0624",
+        "0746",
+        "1484",
+        "1724"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0437",
+        "0566",
+        "1044",
+        "1063",
+        "1483"
+      ],
+      "prize": "€10,- Gut.",
+      "sponsor": "Blaue Blume",
+      "logo": "Blaue-Blume_Logo.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0102",
+        "0477"
+      ],
+      "prize": "1 x 2 Std. Coaching, wahlweise zu Stressmanagement, Potenzial oder Karriere",
+      "sponsor": "Juliane Pannenbäcker Coaching",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0613",
+        "1256",
+        "1746",
+        "1747",
+        "1752"
+      ],
+      "prize": "Kirschkernkissen",
+      "sponsor": "Louie`s grünepflaume",
+      "logo": "25_LouisesGruenePflaume-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0347",
+        "0519",
+        "0853",
+        "1062",
+        "1758"
+      ],
+      "prize": "2 Tickets für eine Hafenrundfahrt",
+      "sponsor": "MARITIME CIRCLE LINE",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

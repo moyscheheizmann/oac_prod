@@ -1,0 +1,71 @@
+{
+  "day": 5,
+  "date": "2024-12-05",
+  "prizes": [
+    {
+      "numbers": [
+        "0416",
+        "0461"
+      ],
+      "prize": "Gutschein á 8 EUR",
+      "sponsor": "Die Pâtisserie",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0179",
+        "1088",
+        "1186",
+        "1507",
+        "1623"
+      ],
+      "prize": "Gutschein für zwei Heißgetränke",
+      "sponsor": "el rojito",
+      "logo": "logo.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0651",
+        "0877",
+        "1397",
+        "1409",
+        "1477"
+      ],
+      "prize": "2 Frühstücksbrettchen",
+      "sponsor": "Tischlerei Paepcke",
+      "logo": "28_Paepcke-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0067",
+        "0279",
+        "0545",
+        "1118",
+        "1354"
+      ],
+      "prize": "ein Gutschein im Wert von 10 Euro",
+      "sponsor": "Victoria Apotheke",
+      "logo": "15_Victoria.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0001",
+        "0044",
+        "0505",
+        "1006",
+        "1064",
+        "1126",
+        "1168",
+        "1703"
+      ],
+      "prize": "Weihnachtsbaum",
+      "sponsor": "TriBühne e.V.",
+      "logo": "image001.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

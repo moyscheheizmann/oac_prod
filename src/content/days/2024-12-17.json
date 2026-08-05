@@ -1,0 +1,78 @@
+{
+  "day": 17,
+  "date": "2024-12-17",
+  "prizes": [
+    {
+      "numbers": [
+        "0013",
+        "0079",
+        "0489",
+        "0557",
+        "0782"
+      ],
+      "prize": "eine Dottie Kerze",
+      "sponsor": "Alsterspectrum",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0083",
+        "0121",
+        "0554",
+        "0688",
+        "0806"
+      ],
+      "prize": "Gutschein im Wert von 10€",
+      "sponsor": "CODOS Coffee",
+      "logo": "logo.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0028",
+        "0598",
+        "1594"
+      ],
+      "prize": "Gutschein",
+      "sponsor": "Hafenmeisterei",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0036",
+        "0595",
+        "0618",
+        "1318",
+        "1564"
+      ],
+      "prize": "ein Gutschein im Wert von 10 Euro",
+      "sponsor": "Kernenergie",
+      "logo": "Kernenergie_Logo.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0051"
+      ],
+      "prize": "1 High-Tea Gutschein",
+      "sponsor": "Louis C. Jacob",
+      "logo": "Logo-Hotel-Louis-C.-Jacob.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0287",
+        "0647",
+        "0954",
+        "1017",
+        "1366"
+      ],
+      "prize": "ein Gutschein im Wert von 10 Euro",
+      "sponsor": "Victoria Apotheke",
+      "logo": "15_Victoria.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "day": 16,
+  "date": "2024-12-16",
+  "prizes": [
+    {
+      "numbers": [
+        "1072"
+      ],
+      "prize": "weihnachtliche Tür-/Tischkränze aus Messing (wiederverwendbar)",
+      "sponsor": "Das Friedchen",
+      "logo": "53_Friedchen.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0551",
+        "1643"
+      ],
+      "prize": "Schulbeutel",
+      "sponsor": "Haspa Ottensen",
+      "logo": "35_HASPA-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0319",
+        "1315",
+        "1346"
+      ],
+      "prize": "2 Koffergurte",
+      "sponsor": "Haspa Ottensen",
+      "logo": "35_HASPA-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0590",
+        "0977",
+        "1539"
+      ],
+      "prize": "Fish & Chips",
+      "sponsor": "HAVN Copenhagen Streetfood",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0493",
+        "0820"
+      ],
+      "prize": "Wrap mit Lachs",
+      "sponsor": "HAVN Copenhagen Streetfood",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0097",
+        "0178",
+        "0997",
+        "1151",
+        "1700"
+      ],
+      "prize": "Gutschein a 8,-",
+      "sponsor": "hier & jetzt",
+      "logo": "Logo-hierjetzt.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0165",
+        "0260",
+        "0488",
+        "0893"
+      ],
+      "prize": "1 Buch",
+      "sponsor": "Petit Kami Comicladen",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0086",
+        "0310",
+        "0849",
+        "1369",
+        "1577"
+      ],
+      "prize": "Schokoladenpaket",
+      "sponsor": "Süd-Nord Kontor",
+      "logo": "57_SüdNordKontor-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

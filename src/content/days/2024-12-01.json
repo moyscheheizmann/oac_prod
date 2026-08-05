@@ -1,0 +1,113 @@
+{
+  "day": 1,
+  "date": "2024-12-01",
+  "prizes": [
+    {
+      "numbers": [
+        "0061",
+        "0213",
+        "0359",
+        "0751",
+        "1179",
+        "1219",
+        "1224",
+        "1432",
+        "1554",
+        "1745"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0812"
+      ],
+      "prize": "Gutschein Bistro für 2 Pers. Currywurst und Pommes im Wert von ca. 18€",
+      "sponsor": "Imbiss Engel",
+      "logo": "26_RestaurantEngel-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0900"
+      ],
+      "prize": "Orakel-Adventskalender",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0139"
+      ],
+      "prize": "Gutschein für Jaegerschnipsel-Produkte",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1431"
+      ],
+      "prize": "Gutschein Jaegerschnipsel-Produkte",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0730"
+      ],
+      "prize": "Gutschein über 10€ für Produkte von britt´s knits",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0692"
+      ],
+      "prize": "umstrickte Vase von britt´s knits",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0501"
+      ],
+      "prize": "Untersetzer von britt´s knits",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0781",
+        "1537"
+      ],
+      "prize": "Täschlein von britt´s knit",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0177",
+        "0299",
+        "0334",
+        "0335",
+        "0509",
+        "1196",
+        "1597",
+        "1667"
+      ],
+      "prize": "Weihnachtsbaum",
+      "sponsor": "TriBühne e.V.",
+      "logo": "image001.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "day": 12,
+  "date": "2024-12-12",
+  "prizes": [
+    {
+      "numbers": [
+        "0088",
+        "0190",
+        "0734",
+        "0800",
+        "1123",
+        "1182",
+        "1454",
+        "1551"
+      ],
+      "prize": "Kinder- und Jugendbuch",
+      "sponsor": "Anonyme Bücherspende",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0258",
+        "0579",
+        "1114",
+        "1515",
+        "1573"
+      ],
+      "prize": "10 € Gutschein",
+      "sponsor": "Frau Meis Eisladen",
+      "logo": "Fraus-Meis-Eis_logo.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0491",
+        "0571",
+        "1206",
+        "1208",
+        "1568"
+      ],
+      "prize": "Gutschein €10,-",
+      "sponsor": "Knuffels Kinderkulturkaufhaus",
+      "logo": "21_Knuffels.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0212",
+        "1674"
+      ],
+      "prize": "1 Gutschein für Workshop nach Wahl für 1 Person",
+      "sponsor": "Kreativwerkstatt Bunsenstraße 2",
+      "logo": "Bunsenstraße-2_Logo.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0171",
+        "0425",
+        "0786",
+        "0809",
+        "1725"
+      ],
+      "prize": "Kirschkernkissen",
+      "sponsor": "Louie`s grünepflaume",
+      "logo": "25_LouisesGruenePflaume-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

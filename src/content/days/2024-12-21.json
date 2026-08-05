@@ -1,0 +1,77 @@
+{
+  "day": 21,
+  "date": "2024-12-21",
+  "prizes": [
+    {
+      "numbers": [
+        "0129",
+        "0665",
+        "0709",
+        "1362",
+        "1735"
+      ],
+      "prize": "Gutschein im Wert von 10€",
+      "sponsor": "CODOS Coffee",
+      "logo": "logo.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0058",
+        "1575"
+      ],
+      "prize": "Gutschein",
+      "sponsor": "Hafenmeisterei",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0169",
+        "0440",
+        "0961",
+        "1261",
+        "1610"
+      ],
+      "prize": "bunte Motivsocken",
+      "sponsor": "Marlowe Nature",
+      "logo": "51_Marlowe-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0498"
+      ],
+      "prize": "1 Gutschein im Wert von 100 €",
+      "sponsor": "Pizzeria Da Michele Hamburg",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0020",
+        "0208",
+        "1157",
+        "1593",
+        "1736"
+      ],
+      "prize": "1 Gutschein im Wert von 20 €",
+      "sponsor": "Pizzeria Da Michele Hamburg",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0059",
+        "0401",
+        "0929",
+        "1350",
+        "1562"
+      ],
+      "prize": "eine Überraschung im Wert von 10-50 Euro",
+      "sponsor": "Salima Kinderschätze",
+      "logo": "32_Salima-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

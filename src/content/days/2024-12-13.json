@@ -1,0 +1,68 @@
+{
+  "day": 13,
+  "date": "2024-12-13",
+  "prizes": [
+    {
+      "numbers": [
+        "0329",
+        "0404",
+        "0476",
+        "0606",
+        "1174"
+      ],
+      "prize": "Spielzeug-Gutschein €10,-",
+      "sponsor": "Hartfelder Spielzeug GmbH",
+      "logo": "Hartfelder-Spiel-Logo_2x.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0705",
+        "1378"
+      ],
+      "prize": "Bienenpatenschaft plus Honig und Kerze",
+      "sponsor": "Honigwerk Hamburg",
+      "logo": "03_Honigwerk-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0042",
+        "0280",
+        "0394",
+        "0777",
+        "1144"
+      ],
+      "prize": "zwei Jö Menüs (Cappuccino + Makrönchen)",
+      "sponsor": "Jö Makrönchen",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0006",
+        "0240",
+        "1417",
+        "1438",
+        "1721"
+      ],
+      "prize": "2 Tickets für eine Hafenrundfahrt",
+      "sponsor": "MARITIME CIRCLE LINE",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0472",
+        "1306",
+        "1622",
+        "1672",
+        "1770"
+      ],
+      "prize": "€10,- Gut.",
+      "sponsor": "TIDE Treibholz und Feinkost",
+      "logo": "TIDE_LogoHamburg_sw.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

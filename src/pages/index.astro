@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import InfoTiles from "../components/InfoTiles.astro";
+import DayTable from "../components/DayTable.astro";
+import LosnummerSearch from "../components/LosnummerSearch.astro";
+import { getOpenDays, getDoors } from "../lib/calendar";
+import { site } from "../data/site";
+
+const days = await getOpenDays();
+const doors = await getDoors();
+---
+
+<Layout>
+  <SiteHeader />
+  <LosnummerSearch days={days} />
+
+  <main>
+    <section class="mx-auto max-w-4xl px-4 py-8 text-center">
+      {
+        site.intro.map((paragraph) => (
+          <p class="mt-4 font-display text-lg leading-relaxed text-oac-navy sm:text-xl">
+            {paragraph}
+          </p>
+        ))
+      }
+    </section>
+
+    {/* TODO: hero illustration — the yearly calendar artwork goes here. */}
+
+    <InfoTiles />
+
+    <section id="kalender" class="mx-auto max-w-6xl px-4 py-10">
+      <h2 class="font-display text-3xl font-bold text-oac-navy">Die Türchen</h2>
+      <ol class="mt-4 grid grid-cols-4 gap-2 sm:grid-cols-6 lg:grid-cols-8">
+        {
+          doors.map((door) =>
+            door.open ? (
+              <li>
+                <a
+                  href={`#tag-${door.date}`}
+                  class="flex aspect-square items-center justify-center rounded bg-oac-cyan text-2xl font-bold text-white transition hover:brightness-95"
+                >
+                  {String(door.day).padStart(2, "0")}
+                </a>
+              </li>
+            ) : (
+              <li>
+                <span
+                  class="flex aspect-square items-center justify-center rounded bg-oac-navy/15 text-2xl font-bold text-oac-navy/40"
+                  aria-label={`Türchen ${door.day} ist noch geschlossen`}
+                >
+                  {String(door.day).padStart(2, "0")}
+                </span>
+              </li>
+            ),
+          )
+        }
+      </ol>
+    </section>
+
+    {
+      days.length === 0 ? (
+        <p class="mx-auto max-w-4xl px-4 py-10 text-center font-display text-xl text-oac-navy">
+          Das erste Türchen öffnet am 1. Dezember.
+        </p>
+      ) : (
+        days
+          .slice()
+          .reverse()
+          .map((day) => <DayTable date={day.data.date} prizes={day.data.prizes} />)
+      )
+    }
+  </main>
+
+  <footer class="mt-10 bg-oac-navy px-4 py-8 text-center text-sm text-white">
+    <p>Eine gemeinnützige Aktion der aTriBühne e.V. und KIDS Hamburg e.V.</p>
+    <p class="mt-2">
+      <a class="underline" href="/impressum">Impressum</a>
+      <span class="mx-2">·</span>
+      <a class="underline" href="/datenschutz">Datenschutz</a>
+    </p>
+  </footer>
+</Layout>

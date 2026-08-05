@@ -1,0 +1,81 @@
+{
+  "day": 7,
+  "date": "2024-12-07",
+  "prizes": [
+    {
+      "numbers": [
+        "0217",
+        "0858",
+        "1078",
+        "1340",
+        "1732"
+      ],
+      "prize": "ein Gutschein im Wert von 30 Euro",
+      "sponsor": "Buchhandlung Christiansen",
+      "logo": "18_BuchhandlungChristiansen-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0071"
+      ],
+      "prize": "2 Tickets für \"Glanz auf dem Vulkan\"",
+      "sponsor": "First Stage Theater",
+      "logo": null,
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0304",
+        "0906",
+        "1004",
+        "1379",
+        "1588"
+      ],
+      "prize": "Korb",
+      "sponsor": "Haspa Ottensen",
+      "logo": "35_HASPA-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0075",
+        "0120"
+      ],
+      "prize": "Spruch-Postkarten-Set von Frau W aus",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0181",
+        "0366",
+        "0815",
+        "1065"
+      ],
+      "prize": "Stadtteil-Poster",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0033"
+      ],
+      "prize": "Poster nach Wahl von Käselotti",
+      "sponsor": "litil",
+      "logo": "12_Litil-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "1630"
+      ],
+      "prize": "ein Gutschein für 1 Std. Massage",
+      "sponsor": "Meike Oelert Heilpraktikerin",
+      "logo": "29_MaikeOelert-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

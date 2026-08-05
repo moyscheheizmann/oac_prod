@@ -1,0 +1,75 @@
+{
+  "day": 6,
+  "date": "2024-12-06",
+  "prizes": [
+    {
+      "numbers": [
+        "1046",
+        "1295"
+      ],
+      "prize": "€86,- Gut.",
+      "sponsor": "Eaton Place",
+      "logo": "39_Eaton-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0288",
+        "0377",
+        "0465",
+        "0978",
+        "1726"
+      ],
+      "prize": "10 € Gutschein",
+      "sponsor": "Frau Meis Eisladen",
+      "logo": "Fraus-Meis-Eis_logo.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0005",
+        "0591",
+        "1156",
+        "1278",
+        "1727"
+      ],
+      "prize": "bunte Motivsocken",
+      "sponsor": "Marlowe Nature",
+      "logo": "51_Marlowe-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0047",
+        "0458",
+        "1167",
+        "1316",
+        "1595"
+      ],
+      "prize": "Gutschein",
+      "sponsor": "Salima Kinderschätze",
+      "logo": "32_Salima-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0021",
+        "1110",
+        "1334"
+      ],
+      "prize": "eine Überraschung im Wert von 10-50 Euro",
+      "sponsor": "Salima Kinderschätze",
+      "logo": "32_Salima-1.png",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    },
+    {
+      "numbers": [
+        "0570"
+      ],
+      "prize": "1 Übernachtung für 2 Personen inkl. Frühstück",
+      "sponsor": "Gastwerk",
+      "logo": "gastwerk_logo_schwarz.jpg",
+      "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
+    }
+  ]
+}

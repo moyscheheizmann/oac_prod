@@ -1,0 +1,145 @@
+---
+import type { Day } from "../lib/calendar";
+import { formatDayHeading } from "../data/site";
+
+interface Props {
+  /** Only days that have already been drawn — see lib/calendar.getOpenDays. */
+  days: Day[];
+}
+
+const { days } = Astro.props;
+
+/**
+ * Lookup table shipped to the browser: lot number -> the prizes it won.
+ *
+ * Built exclusively from already-opened days, so nothing here is a spoiler.
+ * It is small enough (a few thousand short entries by Christmas) that an
+ * inline blob beats a fetch.
+ */
+const index: Record<string, Array<{ heading: string; prize: string; sponsor: string; pickupAt: string }>> = {};
+
+for (const day of days) {
+  for (const prize of day.data.prizes) {
+    for (const number of prize.numbers) {
+      (index[number] ??= []).push({
+        heading: formatDayHeading(day.data.date),
+        prize: prize.prize,
+        sponsor: prize.sponsor,
+        pickupAt: prize.pickupAt,
+      });
+    }
+  }
+}
+
+const lastDay = days.at(-1);
+---
+
+<dialog
+  data-search-dialog
+  class="m-auto w-[min(34rem,calc(100vw-2rem))] rounded-lg bg-white p-0 backdrop:bg-oac-navy/50"
+>
+  <form method="dialog" class="flex justify-end p-2">
+    <button
+      class="rounded px-3 py-1 text-2xl leading-none text-oac-navy hover:bg-oac-paper"
+      aria-label="Schließen">&times;</button
+    >
+  </form>
+
+  <div class="px-6 pb-6">
+    <h2 class="font-display text-2xl font-bold text-oac-navy">Habe ich gewonnen?</h2>
+    <p class="mt-1 text-sm text-oac-ink/70">
+      Die Losnummer steht links unten im weißen Feld auf der Vorderseite Ihres Kalenders.{" "}
+      {lastDay && `Geprüft werden alle Ziehungen bis zum ${formatDayHeading(lastDay.data.date)}.`}
+    </p>
+
+    <form data-search-form class="mt-4 flex gap-2">
+      <label class="sr-only" for="losnummer">Losnummer</label>
+      <input
+        id="losnummer"
+        name="losnummer"
+        type="text"
+        inputmode="numeric"
+        autocomplete="off"
+        maxlength="4"
+        placeholder="z. B. 0824"
+        class="w-full rounded border-2 border-oac-navy/30 px-3 py-2 text-lg tabular-nums focus:border-oac-navy focus:outline-none"
+      />
+      <button
+        type="submit"
+        class="shrink-0 rounded bg-oac-orange px-5 py-2 font-bold text-white hover:brightness-95"
+      >
+        Prüfen
+      </button>
+    </form>
+
+    <div data-search-result class="mt-4 text-sm" role="status" aria-live="polite"></div>
+  </div>
+</dialog>
+
+<script is:inline type="application/json" data-search-index set:html={JSON.stringify(index)} />
+
+<script>
+  interface Win {
+    heading: string;
+    prize: string;
+    sponsor: string;
+    pickupAt: string;
+  }
+
+  const raw = document.querySelector<HTMLScriptElement>("[data-search-index]")?.textContent;
+  const index: Record<string, Win[]> = raw ? JSON.parse(raw) : {};
+
+  const dialog = document.querySelector<HTMLDialogElement>("[data-search-dialog]");
+  const form = document.querySelector<HTMLFormElement>("[data-search-form]");
+  const input = form?.querySelector<HTMLInputElement>("#losnummer");
+  const output = document.querySelector<HTMLElement>("[data-search-result]");
+
+  for (const trigger of document.querySelectorAll("[data-open-search]")) {
+    trigger.addEventListener("click", () => {
+      dialog?.showModal();
+      input?.focus();
+    });
+  }
+
+  const escape = (value: string) =>
+    value.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!output || !input) return;
+
+    // Accept "824" as well as "0824" — the printed numbers are zero-padded.
+    const number = input.value.replace(/\D/g, "").padStart(4, "0");
+
+    if (number.length !== 4) {
+      output.innerHTML =
+        '<p class="text-oac-ink/70">Bitte geben Sie eine vierstellige Losnummer ein.</p>';
+      return;
+    }
+
+    const wins = index[number];
+
+    if (!wins?.length) {
+      output.innerHTML = `<p class="text-oac-ink/70">Für die Losnummer <strong class="tabular-nums">${number}</strong> gab es bisher leider keinen Gewinn. Schauen Sie morgen wieder vorbei!</p>`;
+      return;
+    }
+
+    output.innerHTML = `
+      <p class="font-bold text-oac-navy">Herzlichen Glückwunsch! Losnummer ${number} hat gewonnen:</p>
+      <ul class="mt-2 space-y-3">
+        ${wins
+          .map(
+            (win) => `
+          <li class="border-l-4 border-oac-orange pl-3">
+            <p class="text-xs uppercase text-oac-ink/60">${escape(win.heading)}</p>
+            <p class="font-bold text-oac-navy">${escape(win.prize)}</p>
+            <p class="italic text-oac-ink/80">${escape(win.sponsor)}</p>
+            <p class="mt-1 text-oac-ink/60">Abzuholen bei: ${escape(win.pickupAt)}</p>
+          </li>`,
+          )
+          .join("")}
+      </ul>
+      <p class="mt-3 text-xs text-oac-ink/60">Bitte bringen Sie den Kalender zum Entwerten mit.</p>
+    `;
+  });
+</script>
