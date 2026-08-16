@@ -1,9 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SiteHeader from "../components/SiteHeader.astro";
 import InfoTiles from "../components/InfoTiles.astro";
 import DayTable from "../components/DayTable.astro";
-import LosnummerSearch from "../components/LosnummerSearch.astro";
 import { getOpenDays, getDoors } from "../lib/calendar";
 import { site } from "../data/site";
 
@@ -12,9 +10,6 @@ const doors = await getDoors();
 ---
 
 <Layout>
-  <SiteHeader />
-  <LosnummerSearch days={days} />
-
   <main>
     <section class="mx-auto max-w-4xl px-4 py-8 text-center">
       {
@@ -73,12 +68,4 @@ const doors = await getDoors();
     }
   </main>
 
-  <footer class="mt-10 bg-oac-navy px-4 py-8 text-center text-sm text-white">
-    <p>Eine gemeinnützige Aktion der aTriBühne e.V. und KIDS Hamburg e.V.</p>
-    <p class="mt-2">
-      <a class="underline" href="/impressum">Impressum</a>
-      <span class="mx-2">·</span>
-      <a class="underline" href="/datenschutz">Datenschutz</a>
-    </p>
-  </footer>
 </Layout>

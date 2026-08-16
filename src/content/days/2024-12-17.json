@@ -25,7 +25,7 @@
       ],
       "prize": "Gutschein im Wert von 10€",
       "sponsor": "CODOS Coffee",
-      "logo": "logo.png",
+      "logo": "2024-10-logo.png",
       "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
     },
     {
@@ -49,7 +49,7 @@
       ],
       "prize": "ein Gutschein im Wert von 10 Euro",
       "sponsor": "Kernenergie",
-      "logo": "Kernenergie_Logo.jpg",
+      "logo": "2021-11-Kernenergie_Logo.jpg",
       "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
     },
     {
@@ -58,7 +58,7 @@
       ],
       "prize": "1 High-Tea Gutschein",
       "sponsor": "Louis C. Jacob",
-      "logo": "Logo-Hotel-Louis-C.-Jacob.jpg",
+      "logo": "2022-12-Logo-Hotel-Louis-C.-Jacob.jpg",
       "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
     },
     {
@@ -71,7 +71,7 @@
       ],
       "prize": "ein Gutschein im Wert von 10 Euro",
       "sponsor": "Victoria Apotheke",
-      "logo": "15_Victoria.png",
+      "logo": "2019-11-15_Victoria.png",
       "pickupAt": "TriBühne - Stresemannstr. 374b, 22761 Hamburg"
     }
   ]

@@ -1,0 +1,23 @@
+---
+/**
+ * A placeholder for information the client still has to supply.
+ *
+ * Used for the legally required Impressum fields we do not know. It is
+ * deliberately impossible to overlook — a legally incomplete Impressum is a
+ * real liability, so this must not be able to ship quietly. It also warns in
+ * the build log, which is where a launch check would notice it.
+ */
+interface Props {
+  what: string;
+}
+
+const { what } = Astro.props;
+
+console.warn(`[impressum] Missing required detail: ${what}`);
+---
+
+<mark
+  class="inline-block rounded border-2 border-dashed border-oac-red bg-oac-red/10 px-2 py-1 text-sm font-bold text-oac-red"
+>
+  Noch zu ergänzen: {what}
+</mark>

@@ -73,18 +73,13 @@
   to = "/#infos"
   status = 301
 
-# These three are still to be built as their own pages — keep them temporary.
-[[redirects]]
-  from = "/sponsorenverzeichnis/*"
-  to = "/"
-  status = 302
+# /sponsorenverzeichnis and /kontakt now exist as real pages at the same paths
+# they had on WordPress, so they need no redirect at all — the old bookmarks
+# resolve straight to the new pages.
 
+# Still to be built as its own page — keep it temporary so that no permanent
+# redirect is cached in visitors' browsers before the page exists.
 [[redirects]]
   from = "/der-erloes/*"
-  to = "/"
-  status = 302
-
-[[redirects]]
-  from = "/kontakt/*"
   to = "/"
   status = 302

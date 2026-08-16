@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import { logoFor } from "../lib/logos";
+import { sponsorsPage } from "../data/site";
+
+// Already sorted by name in the exporter; sorted again here so the page does
+// not depend on the order the JSON happens to arrive in.
+const sponsors = (await getCollection("sponsors")).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name, "de"),
+);
+---
+
+<Layout
+  title={`${sponsorsPage.heading} – Ottenser Adventskalender`}
+  description="Alle Geschäfte und Betriebe, die den Ottenser Adventskalender mit Preisen unterstützen."
+>
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <h1 class="font-display text-3xl font-bold text-oac-navy sm:text-4xl">
+      {sponsorsPage.heading}
+    </h1>
+    <p class="mt-4 font-display text-xl text-oac-red">{sponsorsPage.lead}</p>
+    <p class="mt-2 max-w-2xl text-oac-ink/80">{sponsorsPage.thanks}</p>
+
+    <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        sponsors.map((sponsor) => {
+          const logo = logoFor(sponsor.data.logo);
+          return (
+            <li class="flex h-full flex-col overflow-hidden border border-oac-navy/15 bg-white">
+              {/*
+                Sponsors without a logo carry their name in the panel instead,
+                so the name is never printed twice on the same card.
+              */}
+              <div class="flex h-32 items-center justify-center bg-oac-navy/85 p-4">
+                {logo ? (
+                  <Image
+                    src={logo}
+                    alt={sponsor.data.name}
+                    widths={[200, 400]}
+                    sizes="200px"
+                    class="max-h-24 w-auto object-contain"
+                    loading="lazy"
+                  />
+                ) : (
+                  <h2 class="text-center font-bold text-white">{sponsor.data.name}</h2>
+                )}
+              </div>
+
+              <div class="p-4">
+                {logo && <h2 class="font-bold text-oac-navy">{sponsor.data.name}</h2>}
+                {sponsor.data.address && (
+                  <p class="mt-1 text-sm text-oac-ink/70">{sponsor.data.address}</p>
+                )}
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    <p class="mt-8 text-sm text-oac-ink/60">
+      {sponsors.length} Unterstützer*innen
+    </p>
+  </main>
+</Layout>

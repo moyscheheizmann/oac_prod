@@ -1,8 +1,8 @@
 ---
-import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import type { Prize } from "../content.config";
 import { formatDayHeading } from "../data/site";
+import { logoFor } from "../lib/logos";
 
 interface Props {
   date: string;
@@ -10,20 +10,6 @@ interface Props {
 }
 
 const { date, prizes } = Astro.props;
-
-/**
- * Sponsor logos are optional: the old sponsor list has none for roughly a
- * quarter of the businesses, and those rows fall back to the company name.
- */
-const logos = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/sponsors/*.{png,jpg,jpeg,svg,webp,avif}",
-  { eager: true },
-);
-
-function logoFor(name: string | null): ImageMetadata | undefined {
-  if (!name) return undefined;
-  return logos[`/src/assets/sponsors/${name}`]?.default;
-}
 ---
 
 <section class="mx-auto max-w-6xl px-4 py-8" id={`tag-${date}`}>
@@ -53,8 +39,13 @@ function logoFor(name: string | null): ImageMetadata | undefined {
               )}
             </div>
 
-            <div class="col-span-2 flex items-center justify-center bg-oac-navy/85 p-3 sm:col-span-1">
-              {logo ? (
+            {/*
+              The sponsor is already named in the middle column, so a missing
+              logo leaves the column empty rather than repeating it. The empty
+              cell keeps the rows aligned.
+            */}
+            {logo && (
+              <div class="col-span-2 flex items-center justify-center bg-oac-navy/85 p-3 sm:col-span-1">
                 <Image
                   src={logo}
                   alt={prize.sponsor}
@@ -63,12 +54,8 @@ function logoFor(name: string | null): ImageMetadata | undefined {
                   class="max-h-20 w-auto object-contain"
                   loading="lazy"
                 />
-              ) : (
-                <span class="text-center text-sm font-bold text-white">
-                  {prize.sponsor}
-                </span>
-              )}
-            </div>
+              </div>
+            )}
           </li>
         );
       })

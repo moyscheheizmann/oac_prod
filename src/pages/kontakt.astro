@@ -1,0 +1,77 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { contact, credits } from "../data/site";
+---
+
+<Layout
+  title="Kontakt – Ottenser Adventskalender"
+  description="Kontakt zum Team des Ottenser Adventskalenders, Circusschule TriBühne e.V. in Hamburg-Ottensen."
+>
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <h1 class="font-display text-3xl font-bold text-oac-navy sm:text-4xl">Kontakt</h1>
+
+    <div class="mt-8 grid gap-6 lg:grid-cols-2">
+      <section class="bg-oac-cyan p-6 lg:p-8">
+        <h2 class="text-lg font-bold text-oac-navy">Anschrift</h2>
+        <address class="mt-3 space-y-1 text-white not-italic">
+          <p class="font-bold">{contact.organisation}</p>
+          <p>{contact.street}</p>
+          <p>{contact.city}</p>
+          <p class="pt-2">
+            Telefon:{" "}
+            <a class="underline hover:no-underline" href={`tel:${contact.phoneHref}`}>
+              {contact.phone}
+            </a>
+          </p>
+          <p>
+            E-Mail:{" "}
+            <a class="underline hover:no-underline" href={`mailto:${contact.email}`}>
+              {contact.email}
+            </a>
+          </p>
+        </address>
+      </section>
+
+      <section class="bg-oac-orange p-6 lg:p-8">
+        <h2 class="text-lg font-bold text-oac-navy">Fragen und Anregungen</h2>
+        <p class="mt-3 text-white">
+          Bei Fragen und Anregungen wenden Sie sich gerne an das Team des Ottenser
+          Adventskalenders:
+        </p>
+        <p class="mt-3">
+          <a
+            class="inline-block rounded-full bg-white px-5 py-2 font-bold text-oac-navy transition hover:brightness-95"
+            href={`mailto:${contact.calendarEmail}`}
+          >
+            {contact.calendarEmail}
+          </a>
+        </p>
+      </section>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold text-oac-navy">Wer dahinter steckt</h2>
+      <dl class="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-[max-content_1fr]">
+        {
+          credits.map((credit) => (
+            <div class="sm:contents">
+              <dt class="font-bold text-oac-navy">{credit.role}</dt>
+              <dd class="text-oac-ink/80">{credit.names}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="font-display text-2xl font-bold text-oac-navy">Öffnungszeiten Circusbüro</h2>
+      <p class="mt-3 text-oac-ink/80">
+        Di. und Do.: 10:00 – 12:00 Uhr<br />
+        Di. bis Fr.: 15:30 – 18:30 Uhr
+      </p>
+      <p class="mt-3 text-oac-ink/60">
+        Hinweis: Vom 22.12.25 bis zum 04.01.26 ist das Circusbüro geschlossen.
+      </p>
+    </section>
+  </main>
+</Layout>

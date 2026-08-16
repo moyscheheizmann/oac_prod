@@ -36,9 +36,14 @@ import { site } from "../data/site";
 
   <nav data-menu hidden class="border-t border-oac-navy/10 bg-oac-paper">
     <ul class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 font-bold text-oac-navy">
-      <li><a class="block py-1 hover:underline" href="#kalender">Gewinnnummern</a></li>
-      <li><a class="block py-1 hover:underline" href="#infos">Wie funktioniert’s?</a></li>
-      <li><a class="block py-1 hover:underline" href="/sponsoren">Sponsorenverzeichnis</a></li>
+      {/* Absolute, so the anchors still reach the home page from a subpage. */}
+      <li><a class="block py-1 hover:underline" href="/#kalender">Gewinnnummern</a></li>
+      <li><a class="block py-1 hover:underline" href="/#infos">Wie funktioniert’s?</a></li>
+      <li>
+        <a class="block py-1 hover:underline" href="/sponsorenverzeichnis">
+          Sponsorenverzeichnis
+        </a>
+      </li>
       <li><a class="block py-1 hover:underline" href="/kontakt">Kontakt</a></li>
     </ul>
   </nav>

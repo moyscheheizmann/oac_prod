@@ -1,0 +1,362 @@
+[
+  {
+    "id": "altona-93",
+    "name": "Altona 93",
+    "address": "Griegstraße 62, 22763 Hamburg",
+    "logo": "2024-10-1200px-Altona_93.svg_.png"
+  },
+  {
+    "id": "becking-kaffeemanufaktur",
+    "name": "Becking Kaffeemanufaktur",
+    "address": "Leverkusenstraße 31, 22761 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "blaue-blume",
+    "name": "Blaue Blume",
+    "address": "Harkortstraße 95, 22765 Hamburg",
+    "logo": "2021-11-Blaue-Blume_Logo.jpg"
+  },
+  {
+    "id": "buchhandlung-christiansen",
+    "name": "Buchhandlung Christiansen",
+    "address": "Bahrenfelder Str. 79, 22765 Hamburg",
+    "logo": "2019-11-18_BuchhandlungChristiansen-1.png"
+  },
+  {
+    "id": "cafe-44qm",
+    "name": "Cafe 44qm",
+    "address": "Große Brunnenstraße 55, 22763 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "cafe-june",
+    "name": "Café June",
+    "address": "Bahrenfelder Steindamm 43, 22761 Hamburg",
+    "logo": "2021-11-Unknown-2.jpeg"
+  },
+  {
+    "id": "carroux-kaffeeroesterei",
+    "name": "Carroux Kaffeerösterei",
+    "address": "Elbchaussee 583, 22587 Hamburg",
+    "logo": "2019-11-07_Carroux-1.png"
+  },
+  {
+    "id": "cocomat",
+    "name": "COCO-MAT",
+    "address": "Dockenhudener Str. 25, 22587 Hamburg",
+    "logo": "2019-11-23_CocoMat-1.png"
+  },
+  {
+    "id": "codos-coffee",
+    "name": "CODOS  Coffee",
+    "address": "Bahrenfelder Str. 156, 22765 Hamburg",
+    "logo": "2024-10-logo.png"
+  },
+  {
+    "id": "das-friedchen",
+    "name": "Das Friedchen",
+    "address": "Eulenstraße 47, 22765 Hamburg",
+    "logo": "2019-11-53_Friedchen.png"
+  },
+  {
+    "id": "die-patisserie",
+    "name": "Die Patisserie",
+    "address": "Bahrenfelder Str. 231, 22765 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "eaton-place",
+    "name": "Eaton Place",
+    "address": "Bahrenfelder Straße 80, 22765 Hamburg",
+    "logo": "2019-11-39_Eaton-1.png"
+  },
+  {
+    "id": "eisliebe",
+    "name": "Eisliebe",
+    "address": "Bei der Reitbahn 2, 22763 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "el-rojito",
+    "name": "el rojito",
+    "address": "Große Brunnenstraße 68 \n22765 Hamburg",
+    "logo": "2024-10-logo.png"
+  },
+  {
+    "id": "frau-meis-eisladen",
+    "name": "Frau Meis Eisladen",
+    "address": "Fischers Allee 39, 22763 Hamburg",
+    "logo": "2021-11-Fraus-Meis-Eis_logo.jpg"
+  },
+  {
+    "id": "gastwerk",
+    "name": "Gastwerk",
+    "address": "Beim Alten Gaswerk 3/EG, 22761 Hamburg",
+    "logo": "2024-10-gastwerk_logo_schwarz.jpg"
+  },
+  {
+    "id": "gregors-superfood",
+    "name": "Gregor`s Superfood",
+    "address": "Tarpenbekstraße 65, 20251 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "gregors-gmbh-am-schafwedel-10-21435-stelle",
+    "name": "GREGORS GmbH, Am Schafwedel 10, 21435 Stelle",
+    "address": "Schiffsvermietung GREGORS, Abfahrtsort: An den Landungsbrücken, BRÜCKE 10",
+    "logo": "2019-11-14_GREGORS-1.png"
+  },
+  {
+    "id": "hartfelder-spielzeug-gmbh",
+    "name": "Hartfelder\nSpielzeug GmbH",
+    "address": "Mercado, Ottenser Hauptstraße 10, 22765 Hamburg",
+    "logo": "2024-10-Hartfelder-Spiel-Logo_2x.png"
+  },
+  {
+    "id": "haspa-ottensen",
+    "name": "HASPA Ottensen",
+    "address": "Ottenser Hauptstr. 29, 22765 Hamburg",
+    "logo": "2019-11-35_HASPA-1.png"
+  },
+  {
+    "id": "havn-copenhagen-streetfood",
+    "name": "HAVN  Copenhagen Streetfood",
+    "address": "",
+    "logo": null
+  },
+  {
+    "id": "hier-jetzt",
+    "name": "hier & jetzt",
+    "address": "Erzbergerstraße 10, 22765 Hamburg",
+    "logo": "2024-10-Logo-hierjetzt.png"
+  },
+  {
+    "id": "honigwerk-hamburg",
+    "name": "Honigwerk Hamburg",
+    "address": "Espelohweg 57, 22607 Hamburg",
+    "logo": "2019-11-03_Honigwerk-1.png"
+  },
+  {
+    "id": "imbiss-engel",
+    "name": "Imbiss Engel",
+    "address": "Fähranleger Teufelsbrück, 22609 Hamburg",
+    "logo": "2019-11-26_RestaurantEngel-1.png"
+  },
+  {
+    "id": "isociety",
+    "name": "isociety",
+    "address": "Beim Grünen Jäger 25\n20359 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "juliane-pannenbaecker-coaching",
+    "name": "Juliane Pannenbäcker Coaching",
+    "address": "Waitzstraße 1c, 22607 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "joe-makroenchen",
+    "name": "Jö Makrönchen",
+    "address": "Friedensallee 6, 22765 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "kaiserapotheke",
+    "name": "Kaiser-Apotheke",
+    "address": "Bahrenfelder Str. 103, 22765 Hamburg",
+    "logo": "2019-11-17_KaiserApotheke-1.png"
+  },
+  {
+    "id": "kernenergie",
+    "name": "Kernenergie",
+    "address": "Ottenser Hauptstr. 63, 22765 Hamburg",
+    "logo": "2021-11-Kernenergie_Logo.jpg"
+  },
+  {
+    "id": "knuffels-kinderkulturkaufhaus",
+    "name": "Knuffels Kinderkulturkaufhaus",
+    "address": "Bahrenfelder Str. 68, 22765 Hamburg",
+    "logo": "2019-11-21_Knuffels.png"
+  },
+  {
+    "id": "kreativwerkstatt-bunsenstrasse-2",
+    "name": "Kreativwerkstatt Bunsenstraße 2",
+    "address": "Bunsenstraße 2, 22765 Hamburg",
+    "logo": "2021-11-Bunsenstraße-2_Logo.png"
+  },
+  {
+    "id": "krupka-schuhe",
+    "name": "Krupka Schuhe",
+    "address": "Ottensener Hauptstraße",
+    "logo": "2019-11-33_KrupkaSchuhe-1.png"
+  },
+  {
+    "id": "litil",
+    "name": "Litil",
+    "address": "Kleine Rainstraße 6, 22765 Hamburg",
+    "logo": "2019-11-12_Litil-1.png"
+  },
+  {
+    "id": "louies-gruenepflaume",
+    "name": "Louie´s grünepflaume",
+    "address": "Große Brunnenstr.113 , 22763 Hamburg \n-\n Ab dem 01.01.2022 befindet sich Louie’s gruenepflaume im Beerenweg 6-8",
+    "logo": "2019-11-25_LouisesGruenePflaume-1.png"
+  },
+  {
+    "id": "louis-c-jacob",
+    "name": "Louis C. Jacob",
+    "address": "Elbchaussee 401-403, 22609 Hamburg",
+    "logo": "2022-12-Logo-Hotel-Louis-C.-Jacob.jpg"
+  },
+  {
+    "id": "marlowe-nature",
+    "name": "Marlowe Nature",
+    "address": "Beim Schlump 5&9\n20144 Hamburg",
+    "logo": "2019-11-51_Marlowe-1.png"
+  },
+  {
+    "id": "meet-me-in-the-morning",
+    "name": "Meet Me In The Morning",
+    "address": "Stresemannstraße 313, 22761 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "meike-oelert-heilpraktikerin",
+    "name": "Meike Oelert Heilpraktikerin",
+    "address": "Kleine Rainstr. 44, 22765 Hamburg",
+    "logo": "2019-11-29_MaikeOelert-1.png"
+  },
+  {
+    "id": "mercado-centermanagement",
+    "name": "Mercado Centermanagement",
+    "address": "Mercado, Ottenser Hauptstr. 10, 22765 Hamburg",
+    "logo": "2019-11-13_Mercado-1.png"
+  },
+  {
+    "id": "miniatur-wunderland",
+    "name": "Miniatur Wunderland",
+    "address": "Kehrwieder 2-4/Block D",
+    "logo": "2019-11-59_MiniaturWunderland-1.jpg"
+  },
+  {
+    "id": "opernloft-im-alten-faehrterminal",
+    "name": "Opernloft im Alten Fährterminal",
+    "address": "Van-der-Smissen-Straße 4, 22767 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "petit-kami-comicladen",
+    "name": "Petit Kami Comicladen",
+    "address": "Bahrenfelder Str. 200, 22765 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "pizzeria-da-michele-hamburg",
+    "name": "Pizzeria Da Michele Hamburg",
+    "address": "Bahrenfelder Str. 177-181, 22765 Hamburg",
+    "logo": null
+  },
+  {
+    "id": "restaurant-engel",
+    "name": "Restaurant Engel",
+    "address": "Fähranleger Teufelsbrück, 22609 Hamburg",
+    "logo": "2019-11-26_RestaurantEngel.png"
+  },
+  {
+    "id": "s-fachl",
+    "name": "s Fachl",
+    "address": "s´Fachl am Spritzenplatz, Bahrenfelder Str. 79",
+    "logo": "2021-12-Logo-01.png"
+  },
+  {
+    "id": "salima-kinderschaetze",
+    "name": "Salima Kinderschätze",
+    "address": "Salima Kinderschätze, Waitzstr. 21, 22607 Hamburg",
+    "logo": "2019-11-32_Salima-1.png"
+  },
+  {
+    "id": "schlecks",
+    "name": "Schlecks",
+    "address": "Fischers Allee 78, 22763 Hamburg",
+    "logo": "2021-11-Schlecks-LOGO.png"
+  },
+  {
+    "id": "schmidts-tivoli",
+    "name": "Schmidts Tivoli",
+    "address": "Spielbudenplatz 24-25",
+    "logo": "2019-11-36_SchmidtsTivoli-1.png"
+  },
+  {
+    "id": "susan-boening-heilpraktikerin",
+    "name": "Susan Boening Heilpraktikerin",
+    "address": "",
+    "logo": null
+  },
+  {
+    "id": "suednord-kontor",
+    "name": "Süd-Nord Kontor",
+    "address": "Stresemannstr. 374 A",
+    "logo": "2019-11-57_SüdNordKontor-1.png"
+  },
+  {
+    "id": "thalia-buchhandlung",
+    "name": "Thalia Buchhandlung",
+    "address": "Ottenser Hauptstraße 10, 22765 Hamburg",
+    "logo": "2021-11-Thalia_logo.jpg"
+  },
+  {
+    "id": "tide-treibholz-und-feinkost",
+    "name": "TIDE Treibholz und Feinkost",
+    "address": "Rothestraße 53, 22765 Hamburg",
+    "logo": "2022-12-TIDE_LogoHamburg_sw.png"
+  },
+  {
+    "id": "tischlerei-paepcke",
+    "name": "Tischlerei Paepcke",
+    "address": "Hauskoppel 5, 22111 Hamburg",
+    "logo": "2019-11-28_Paepcke-1.png"
+  },
+  {
+    "id": "tribuehne-ev",
+    "name": "TriBühne e.V.",
+    "address": "Stresemanstr. 374b, 22761 Hamburg",
+    "logo": "2017-12-image001.jpg"
+  },
+  {
+    "id": "victoria-apotheke",
+    "name": "Victoria Apotheke",
+    "address": "Bahrenfelder Str. 69, 22765 Hamburg",
+    "logo": "2019-11-15_Victoria.png"
+  },
+  {
+    "id": "why-not-cafe",
+    "name": "Why not Café",
+    "address": "Daimlerstraße 38 Erdgeschoss, 22763 Hamburg",
+    "logo": "2021-11-whynot_nur-Logo_klein.jpg"
+  },
+  {
+    "id": "wohngeschwister-ottensen",
+    "name": "Wohngeschwister Ottensen",
+    "address": "Bahrenfelder Str. 138, 22765 Hamburg",
+    "logo": "2024-10-images.png"
+  },
+  {
+    "id": "zanshin-dojo",
+    "name": "Zanshin Dojo",
+    "address": "Mendelssohnstr. 15B, 22761 Hamburg",
+    "logo": "2019-11-30_ZanshinDojo-1.png"
+  },
+  {
+    "id": "zeise-kinos",
+    "name": "Zeise Kinos",
+    "address": "Zeise Hallen Kinobetriebs GmbH Friedensallee 7-9 | 22765 Hamburg, 040 88885959",
+    "logo": "2019-11-48_ZeiseKinos.png"
+  },
+  {
+    "id": "zeit-fuer-brot",
+    "name": "Zeit für Brot",
+    "address": "Ottenser Hauptstraße 41, 22765 Hamburg",
+    "logo": "2021-12-a5648f6517c14d9fde1d67566a8ad970.png"
+  }
+]

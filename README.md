@@ -84,9 +84,10 @@ date gate, so they cannot expose undrawn doors either.
 | What | Where |
 |---|---|
 | Prize data, one file per day | `src/content/days/YYYY-MM-DD.json` |
-| Schema for the above | `src/content.config.ts` |
+| Sponsor directory | `src/content/sponsors.json` |
+| Schema for both | `src/content.config.ts` |
 | Sponsor logos | `src/assets/sponsors/` |
-| Page copy (intro, info tiles) | `src/data/site.ts` |
+| Page copy (intro, tiles, contact, Impressum) | `src/data/site.ts` |
 
 `src/content/days/` currently holds the **2024** draw as sample data, so the
 site renders during development. Replace it with the real year before launch.
@@ -99,11 +100,20 @@ pipeline, which reads the notary's Excel list and the sponsor list:
 ```python
 from pathlib import Path
 import json
-from ottenser_adventcalender import export_daily_json, collect_logo_sources
+from ottenser_adventcalender import (
+    export_daily_json, export_sponsors_json, collect_logo_sources, load_sponsors_lookup,
+)
 
 # ... build final_df as in create_tables/create_winning_tables.ipynb ...
 
 export_daily_json(final_df, Path("../oac_prod/src/content/days"))
+
+# The Sponsorenverzeichnis comes from the same sponsor list that supplies the
+# logos in the day tables, so the two cannot drift apart.
+export_sponsors_json(
+    load_sponsors_lookup(Path("data/sponsorenliste.csv")),
+    Path("../oac_prod/src/content/sponsors.json"),
+)
 
 Path("data/logos.json").write_text(
     json.dumps(collect_logo_sources(final_df), ensure_ascii=False, indent=2)
@@ -128,8 +138,32 @@ Kalam / Arimo pairing follow the redesign mockups in `../assets/img/`; both
 typefaces are carried over from the old theme and are self-hosted via
 `@fontsource` rather than loaded from Google's CDN.
 
+## Before launch
+
+Blocking, in rough order of how badly they bite:
+
+- **Complete the Impressum.** `impressum` in `src/data/site.ts` has five fields
+  set to `null` — the Vertretungsberechtigte(r), the Vereinsregister and its
+  number, the USt-ID, and the person responsible under § 18 Abs. 2 MStV. They
+  render as loud red placeholders and warn in the build log. An incomplete
+  Impressum is a genuine legal exposure, so these must come from the client.
+- **Add a Datenschutzerklärung.** Required under Art. 13 DSGVO even though the
+  site sets no cookies and self-hosts its fonts. The footer link is currently
+  omitted rather than left pointing at a 404.
+- **Fix the sponsor list.** `CODOS Coffee` and `el rojito` share one logo URL in
+  the source CSV, so el rojito shows the wrong logo. Two sponsors (`HAVN
+  Copenhagen Streetfood`, `Susan Boening Heilpraktikerin`) have no address.
+- **Settle the prize total.** The home page says "mehr als 10.000 Euro", the
+  Sponsorenverzeichnis says "über 12.000,- Euro". Both figures come from the
+  current site.
+- **Update the credits.** `credits` in `src/data/site.ts` still names the
+  previous site under "Internetauftritt" and "Grafik".
+- Replace the 2024 sample draw in `src/content/days/` with the real year.
+
 ## Still to do
 
 - Hero illustration (the yearly calendar artwork) — placeholder in `index.astro`
-- Subpages: Sponsorenverzeichnis, Kontakt, Der Erlös, Impressum, Datenschutz
+- "Der Erlös" subpage (still a 302 to `/` in `netlify.toml`)
 - Circus-acrobat silhouettes flanking the page, per the mockups
+- Logo contrast: several sponsor logos are dark artwork on the navy panel and
+  read poorly. Either a white panel or per-logo treatment is needed.

@@ -1,5 +1,9 @@
 ---
 import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import LosnummerSearch from "../components/LosnummerSearch.astro";
+import { getOpenDays } from "../lib/calendar";
 
 interface Props {
   title?: string;
@@ -11,6 +15,10 @@ const {
   description =
     "Der Ottenser Adventskalender – prall gefüllt mit tollen Preisen von Ottenser Geschäften und aus ganz Hamburg. Eine gemeinnützige Aktion der aTriBühne e.V. und KIDS Hamburg e.V.",
 } = Astro.props;
+
+// The header's "Losnummer eingeben" button lives on every page, so the dialog
+// it opens has to as well — otherwise the button is dead on the subpages.
+const days = await getOpenDays();
 ---
 
 <!doctype html>
@@ -23,6 +31,9 @@ const {
     <meta name="description" content={description} />
   </head>
   <body class="bg-oac-paper">
+    <SiteHeader />
+    <LosnummerSearch days={days} />
     <slot />
+    <SiteFooter />
   </body>
 </html>

@@ -14,6 +14,76 @@ export const site = {
   ],
 } as const;
 
+/** Organiser details, from the current Kontakt page. */
+export const contact = {
+  organisation: "Circusschule TriBühne e.V.",
+  street: "Stresemannstr. 374b",
+  city: "22761 Hamburg",
+  phone: "040 – 851579 – 09",
+  /** Tel: href — digits only, international format. */
+  phoneHref: "+494085157909",
+  email: "info@tribuehne.net",
+  /** Questions about the calendar specifically go here, not to info@. */
+  calendarEmail: "kalender@tribuehne.net",
+} as const;
+
+/**
+ * Credits, as printed on the current site.
+ *
+ * NOTE: "Internetauftritt" and "Grafik" still credit the previous site. Both
+ * need updating for the relaunch — the client should confirm the wording.
+ */
+export const credits: Array<{ role: string; names: string }> = [
+  { role: "Internetauftritt", names: "Louisa Klenke" },
+  { role: "Grafik", names: "Louisa Klenke" },
+  { role: "Illustration", names: "Annette Prüfer" },
+  {
+    role: "Konzeption und Koordination",
+    names: "Christa Mues-Sindemann, Holger de Vries, Jenny Siebert",
+  },
+];
+
+/**
+ * Impressum.
+ *
+ * German law (§ 5 DDG) requires a provider identification. The current site
+ * has no dedicated Impressum page — the Kontakt page carries the address block
+ * and a copyright notice, which is not sufficient on its own.
+ *
+ * Fields set to null are legally required but unknown to us. They render as a
+ * loud placeholder so the page cannot go live still missing them. The client
+ * has to supply them:
+ *
+ *   - board: the Vertretungsberechtigte(r), i.e. who represents the Verein
+ *   - register / registerNumber: the Vereinsregister and its VR number
+ *   - vatId: Umsatzsteuer-ID, only if the Verein has one — otherwise leave
+ *     null and delete the row from the page
+ *   - contentResponsible: the person responsible under § 18 Abs. 2 MStV
+ */
+export const impressum: {
+  board: string | null;
+  register: string | null;
+  registerNumber: string | null;
+  vatId: string | null;
+  contentResponsible: string | null;
+} = {
+  board: null,
+  register: null,
+  registerNumber: null,
+  vatId: null,
+  contentResponsible: null,
+};
+
+/** Intro copy for the Sponsorenverzeichnis, from the current page. */
+export const sponsorsPage = {
+  heading: "Sponsorenverzeichnis",
+  // The home page says "mehr als 10.000 Euro" — the two figures disagree on
+  // the current site too. Worth having the client settle on one.
+  lead: "Gewinne im Wert von über 12.000,- Euro",
+  thanks:
+    "… und 1001 x DANKE an alle Geschäftsleute, die uns mit Spenden so großzügig unterstützt haben.",
+} as const;
+
 export type TileColor = "cyan" | "red" | "orange";
 
 export interface InfoTile {
