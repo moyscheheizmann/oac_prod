@@ -1,0 +1,90 @@
+# Netlify deployment for the Ottenser Adventskalender.
+#
+# The site is fully static — no Astro adapter is needed. The only moving part
+# is the scheduled function in netlify/functions/, which re-triggers a build
+# each night so the next door opens. See README.md.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Astro's date gate reads Europe/Berlin explicitly, so the build machine's
+  # own timezone does not matter. Pinned anyway so build logs read sensibly.
+  TZ = "Europe/Berlin"
+
+# Deploy Previews and branch builds must never show undrawn doors to anyone who
+# gets the URL. They build exactly like production, so the gate applies — this
+# is here to state the intent, not to change behaviour.
+[context.deploy-preview]
+  command = "npm run build"
+
+# ---------------------------------------------------------------------------
+# Caching
+# ---------------------------------------------------------------------------
+
+# Astro fingerprints everything under /_astro/, so it is safe to cache forever.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# The HTML changes every night when a door opens. Netlify purges its own CDN on
+# deploy, but browsers must be told not to hold on to yesterday's page.
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+# ---------------------------------------------------------------------------
+# Redirects from the old WordPress URLs
+# ---------------------------------------------------------------------------
+# Only paths that are permanently gone are 301s. Anything that will come back
+# as a real page later is a 302, because a 301 sits in visitors' browser caches
+# indefinitely and would keep redirecting them away from the new page.
+
+# The 24 per-day pages and their index collapse into the one-page layout.
+[[redirects]]
+  from = "/gewinnnummern-2025/*"
+  to = "/#kalender"
+  status = 301
+
+[[redirects]]
+  from = "/advent-calendar/*"
+  to = "/#kalender"
+  status = 301
+
+# "Wie funktionierts?" is now the info tiles on the home page.
+[[redirects]]
+  from = "/wie-funktionierts/*"
+  to = "/#infos"
+  status = 301
+
+# These three are still to be built as their own pages — keep them temporary.
+[[redirects]]
+  from = "/sponsorenverzeichnis/*"
+  to = "/"
+  status = 302
+
+[[redirects]]
+  from = "/der-erloes/*"
+  to = "/"
+  status = 302
+
+[[redirects]]
+  from = "/kontakt/*"
+  to = "/"
+  status = 302

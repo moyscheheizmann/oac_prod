@@ -1,0 +1,31 @@
+name: CI
+
+# Deployment is Netlify's job (see netlify.toml). This only guards the build,
+# the types, and the date gate.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Type check
+        run: npx astro check
+
+      - name: Build
+        run: npm run build
+
+      - name: Undrawn doors must not leak
+        run: node scripts/check-no-leak.mjs

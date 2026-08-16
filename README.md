@@ -18,7 +18,16 @@ written into the generated HTML — a client-side filter would leave them visibl
 in the page source, which for a notarised raffle is not acceptable.
 
 The consequence is that **the site must be rebuilt every day in December**.
-`.github/workflows/daily-build.yml` does this at 00:05 Berlin time.
+The scheduled function in `netlify/functions/daily-rebuild.mts` does this at
+00:05 Berlin time.
+
+`scripts/check-no-leak.mjs` is the regression test for this: it builds against
+a pinned mid-calendar date and fails if any later day's numbers appear in the
+output. CI runs it on every push.
+
+```bash
+npm run check:leak
+```
 
 Preview another date without waiting for it:
 
@@ -26,8 +35,49 @@ Preview another date without waiting for it:
 OAC_TODAY=2025-12-06 npm run build
 ```
 
-The same override is exposed as an input on the `Daily build` workflow, so the
-client can preview a date from the GitHub Actions tab.
+## Deployment (Netlify)
+
+The site is static, so no Astro adapter is involved — Netlify runs
+`npm run build` and serves `dist/`. Everything else lives in `netlify.toml`.
+
+### One-time setup
+
+1. **Connect the repo.** Netlify → Add new site → Import an existing project.
+   Build command and publish directory are read from `netlify.toml`; leave the
+   UI fields empty so there is one source of truth.
+
+2. **Create a build hook.** Site configuration → Build & deploy → Build hooks →
+   Add build hook. Name it `daily-rebuild`, target `main`, and copy the URL.
+
+3. **Store the hook as an environment variable.** Site configuration →
+   Environment variables → `BUILD_HOOK_URL` = the URL from step 2.
+
+   This is a secret — anyone holding it can trigger builds — so it is
+   deliberately not committed. The scheduled function fails loudly in the
+   function log if it is missing.
+
+4. **Deploy once**, so the scheduled function is registered. Netlify only picks
+   up the schedule after the function has shipped; it will not run before the
+   first deploy. Confirm under Logs → Functions that `daily-rebuild` appears.
+
+### Verifying the schedule
+
+Trigger the function by hand from Netlify (Functions → `daily-rebuild` →
+Trigger) and check that a new deploy starts. Worth doing once in late November
+each year, since the rest of the year nobody notices whether it fires.
+
+### Old WordPress URLs
+
+`netlify.toml` redirects the retired paths. The per-day pages
+(`/advent-calendar/…`) and `/gewinnnummern-2025/` are **301**s, since they are
+permanently folded into the one-page layout. `/kontakt/`, `/der-erloes/` and
+`/sponsorenverzeichnis/` are **302**s on purpose — those will become real pages
+here, and a 301 would sit in visitors' browser caches and keep redirecting them
+away from the page once it exists. Change them to 301 only if the path is
+genuinely never coming back.
+
+Deploy Previews are public to anyone with the URL, but build through the same
+date gate, so they cannot expose undrawn doors either.
 
 ## Content
 
