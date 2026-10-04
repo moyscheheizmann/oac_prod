@@ -1,9 +1,11 @@
 ---
+import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import InfoTiles from "../components/InfoTiles.astro";
 import DayTable from "../components/DayTable.astro";
 import { getOpenDays, getDoors } from "../lib/calendar";
 import { site } from "../data/site";
+import calendarArt from "../assets/hero/kalender-2026.jpg";
 
 const days = await getOpenDays();
 const doors = await getDoors();
@@ -11,17 +13,32 @@ const doors = await getDoors();
 
 <Layout>
   <main>
-    <section class="mx-auto max-w-4xl px-4 py-8 text-center">
-      {
-        site.intro.map((paragraph) => (
-          <p class="mt-4 font-display text-lg leading-relaxed text-oac-navy sm:text-xl">
-            {paragraph}
-          </p>
-        ))
-      }
+    {/* Hero: the yearly calendar artwork, shown whole. */}
+    <section class="mx-auto max-w-6xl px-4 pt-6 pb-8">
+      <Picture
+        src={calendarArt}
+        alt="Die Illustration des Ottenser Adventskalenders 2026: eine verschneite Ottenser Straßenecke voller Artist*innen, mit den Türchennummern 1 bis 24."
+        widths={[640, 960, 1280, 1920, 2400]}
+        sizes="(min-width: 1152px) 1120px, calc(100vw - 2rem)"
+        formats={["avif", "webp"]}
+        loading="eager"
+        fetchpriority="high"
+        class="h-auto w-full rounded-sm shadow-lg"
+      />
     </section>
 
-    {/* TODO: hero illustration — the yearly calendar artwork goes here. */}
+    {/* Navy band, echoing the artwork's night sky. */}
+    <section class="bg-oac-navy">
+      <div class="mx-auto max-w-5xl px-4 py-10 text-center sm:px-8 sm:py-12">
+        {
+          site.intro.map((paragraph) => (
+            <p class="mt-4 font-display text-lg leading-relaxed text-oac-paper first:mt-0 lg:text-xl">
+              {paragraph}
+            </p>
+          ))
+        }
+      </div>
+    </section>
 
     <InfoTiles />
 
