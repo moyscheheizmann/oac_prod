@@ -8,24 +8,146 @@ const background: Record<TileColor, string> = {
 };
 ---
 
-<section id="infos" class="grid gap-0 sm:grid-cols-2 lg:grid-cols-3">
+{/*
+  Flip cards: the front shows only the heading, the back the full text.
+  Hover turns a card on devices that can hover; a click or tap toggles it
+  everywhere. Both faces share one grid cell, and the rows are 1fr, so every
+  tile is as tall as the longest back.
+*/}
+<section id="infos" class="grid auto-rows-fr gap-0 sm:grid-cols-2 lg:grid-cols-3">
   {
-    infoTiles.map((tile) => (
-      <article class={`${background[tile.color]} p-6 lg:p-8`}>
-        <h2 class="text-lg font-bold text-oac-navy">{tile.heading}</h2>
+    infoTiles.map((tile, index) => (
+      <article class="flip-card" data-flip-card>
+        <div class="flip-card-inner">
+          <div
+            class={`flip-card-face ${background[tile.color]} flex flex-col items-center justify-center p-6 text-center lg:p-8`}
+          >
+            <h2 class="text-xl font-bold text-oac-navy lg:text-2xl">
+              <button
+                type="button"
+                aria-expanded="false"
+                aria-controls={`info-${index}`}
+                data-flip-toggle
+                class="cursor-pointer text-balance focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-oac-navy"
+              >
+                {tile.heading}
+              </button>
+            </h2>
+            <span aria-hidden="true" class="mt-4 text-2xl leading-none text-white">
+              ↻
+            </span>
+          </div>
 
-        {tile.body?.map((paragraph) => (
-          <p class="mt-3 text-sm leading-relaxed text-white">{paragraph}</p>
-        ))}
+          <div
+            id={`info-${index}`}
+            inert
+            class={`flip-card-face flip-card-back ${background[tile.color]} p-6 lg:p-8`}
+          >
+            <p aria-hidden="true" class="text-lg font-bold text-oac-navy">
+              {tile.heading}
+            </p>
 
-        {tile.items && (
-          <ul class="mt-3 space-y-1 text-sm leading-relaxed text-white">
-            {tile.items.map((item) => (
-              <li>{item}</li>
+            {tile.body?.map((paragraph) => (
+              <p class="mt-3 text-sm leading-relaxed text-white">{paragraph}</p>
             ))}
-          </ul>
-        )}
+
+            {tile.items && (
+              <ul class="mt-3 space-y-1 text-sm leading-relaxed text-white">
+                {tile.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
       </article>
     ))
   }
 </section>
+
+<style>
+  .flip-card {
+    perspective: 1200px;
+    cursor: pointer;
+  }
+
+  .flip-card-inner {
+    display: grid;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+  }
+
+  /* Both faces in the same cell, so the card takes the taller one's height. */
+  .flip-card-face {
+    grid-area: 1 / 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card[data-flipped] .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  @media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  /* No spinning for reduced motion: swap the faces with a short fade. */
+  @media (prefers-reduced-motion: reduce) {
+    .flip-card-inner,
+    .flip-card[data-flipped] .flip-card-inner,
+    .flip-card:hover .flip-card-inner {
+      transform: none;
+    }
+
+    .flip-card-face {
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .flip-card-back {
+      transform: none;
+      opacity: 0;
+    }
+
+    .flip-card[data-flipped] .flip-card-back {
+      opacity: 1;
+    }
+
+    .flip-card[data-flipped] .flip-card-face:not(.flip-card-back) {
+      opacity: 0;
+    }
+
+    @media (hover: hover) {
+      .flip-card:hover .flip-card-back {
+        opacity: 1;
+      }
+
+      .flip-card:hover .flip-card-face:not(.flip-card-back) {
+        opacity: 0;
+      }
+    }
+  }
+</style>
+
+<script>
+  for (const card of document.querySelectorAll<HTMLElement>("[data-flip-card]")) {
+    const toggle = card.querySelector<HTMLButtonElement>("[data-flip-toggle]");
+    const back = card.querySelector<HTMLElement>(".flip-card-back");
+
+    // The whole card is the click target; the button carries the state for
+    // keyboard and screen reader users.
+    card.addEventListener("click", () => {
+      const flipped = !card.hasAttribute("data-flipped");
+      card.toggleAttribute("data-flipped", flipped);
+      toggle?.setAttribute("aria-expanded", String(flipped));
+      if (back) back.inert = !flipped;
+    });
+  }
+</script>
