@@ -14,7 +14,10 @@ const background: Record<TileColor, string> = {
   everywhere. Both faces share one grid cell, and the rows are 1fr, so every
   tile is as tall as the longest back.
 */}
-<section id="infos" class="grid auto-rows-fr gap-0 sm:grid-cols-2 lg:grid-cols-3">
+<section
+  id="infos"
+  class="mx-auto my-10 grid max-w-6xl auto-rows-fr gap-0 px-4 sm:my-14 sm:grid-cols-2 lg:grid-cols-3"
+>
   {
     infoTiles.map((tile, index) => (
       <article class="flip-card" data-flip-card>

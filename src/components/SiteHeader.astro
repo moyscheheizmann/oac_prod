@@ -1,21 +1,28 @@
 ---
 import { site } from "../data/site";
+import logo from "../assets/logo/ottenser-adventskalender-on-navy.svg";
 ---
 
-<header class="sticky top-0 z-40 bg-oac-paper/95 backdrop-blur-sm">
+<header class="sticky top-0 z-40 bg-oac-navy">
   <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 sm:py-4">
     <a
       href="/"
-      class="font-display text-2xl leading-none font-bold text-oac-navy sm:text-3xl lg:text-4xl"
+      class="shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-oac-paper"
     >
-      {site.title}
+      <img
+        src={logo.src}
+        width={logo.width}
+        height={logo.height}
+        alt={site.title}
+        class="h-14 w-auto sm:h-18 lg:h-22"
+      />
     </a>
 
     <div class="ml-auto flex items-center gap-3">
       <button
         type="button"
         data-open-search
-        class="rounded-full bg-oac-orange px-4 py-2 text-sm font-bold text-white transition hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oac-navy sm:px-6"
+        class="rounded-full bg-oac-orange px-4 py-2 text-sm font-bold text-white transition hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oac-paper sm:px-6"
       >
         Losnummer eingeben
       </button>
@@ -25,17 +32,17 @@ import { site } from "../data/site";
         aria-label="Menü öffnen"
         aria-expanded="false"
         data-menu-toggle
-        class="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-[5px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oac-navy"
+        class="flex h-10 w-10 shrink-0 flex-col items-center justify-center gap-[5px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oac-paper"
       >
-        <span class="block h-[3px] w-7 rounded bg-oac-navy"></span>
-        <span class="block h-[3px] w-7 rounded bg-oac-navy"></span>
-        <span class="block h-[3px] w-7 rounded bg-oac-navy"></span>
+        <span class="block h-[3px] w-7 rounded bg-oac-paper"></span>
+        <span class="block h-[3px] w-7 rounded bg-oac-paper"></span>
+        <span class="block h-[3px] w-7 rounded bg-oac-paper"></span>
       </button>
     </div>
   </div>
 
-  <nav data-menu hidden class="border-t border-oac-navy/10 bg-oac-paper">
-    <ul class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 font-bold text-oac-navy">
+  <nav data-menu hidden class="border-t border-oac-paper/15 bg-oac-navy">
+    <ul class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 font-bold text-oac-paper">
       {/* Absolute, so the anchors still reach the home page from a subpage. */}
       <li><a class="block py-1 hover:underline" href="/#kalender">Gewinnnummern</a></li>
       <li><a class="block py-1 hover:underline" href="/#infos">Wie funktioniert’s?</a></li>
@@ -47,10 +54,6 @@ import { site } from "../data/site";
       <li><a class="block py-1 hover:underline" href="/kontakt">Kontakt</a></li>
     </ul>
   </nav>
-
-  <div class="mx-auto max-w-6xl px-4">
-    <hr class="border-t-2 border-dashed border-oac-navy/40" />
-  </div>
 </header>
 
 <script>
