@@ -7,6 +7,7 @@
 
 export const site = {
   title: "Ottenser Adventskalender",
+  welcome: "Herzlich willkommen",
   intro: [
     "Der Ottenser Adventskalender ist wieder da – prall gefüllt mit tollen Preisen von Ottenser Geschäften und aus ganz Hamburg für Ottensen und alle Anderen",
     "Der Adventskalender „Weihnachten unter´m Circuszelt“ ist eine gemeinnützige Aktion der aTriBühne e.V. und KIDS Hamburg e.V. (Kompetenz- und Infozentrum Down-Syndrom).",
