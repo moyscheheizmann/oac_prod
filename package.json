@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@fontsource/arimo": "^5.3.0",
+    "@fontsource/handlee": "^5.3.0",
     "@fontsource/kalam": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.1.6",

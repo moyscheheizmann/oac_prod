@@ -36,17 +36,17 @@ const lastDay = days.at(-1);
 
 <dialog
   data-search-dialog
-  class="m-auto w-[min(34rem,calc(100vw-2rem))] rounded-lg bg-white p-0 backdrop:bg-oac-navy/50"
+  class="m-auto w-[min(34rem,calc(100vw-2rem))] rounded-lg bg-white p-0 backdrop:bg-oac-berry/50"
 >
   <form method="dialog" class="flex justify-end p-2">
     <button
-      class="rounded px-3 py-1 text-2xl leading-none text-oac-navy hover:bg-oac-paper"
+      class="rounded px-3 py-1 text-2xl leading-none text-oac-berry hover:bg-oac-paper"
       aria-label="Schließen">&times;</button
     >
   </form>
 
   <div class="px-6 pb-6">
-    <h2 class="font-display text-2xl font-bold text-oac-navy">Habe ich gewonnen?</h2>
+    <h2 class="font-display text-2xl font-bold text-oac-berry">Habe ich gewonnen?</h2>
     <p class="mt-1 text-sm text-oac-ink/70">
       Die Losnummer steht links unten im weißen Feld auf der Vorderseite Ihres Kalenders.{" "}
       {lastDay && `Geprüft werden alle Ziehungen bis zum ${formatDayHeading(lastDay.data.date)}.`}
@@ -62,7 +62,7 @@ const lastDay = days.at(-1);
         autocomplete="off"
         maxlength="4"
         placeholder="z. B. 0824"
-        class="w-full rounded border-2 border-oac-navy/30 px-3 py-2 text-lg tabular-nums focus:border-oac-navy focus:outline-none"
+        class="w-full rounded border-2 border-oac-berry/30 px-3 py-2 text-lg tabular-nums focus:border-oac-berry focus:outline-none"
       />
       <button
         type="submit"
@@ -125,14 +125,14 @@ const lastDay = days.at(-1);
     }
 
     output.innerHTML = `
-      <p class="font-bold text-oac-navy">Herzlichen Glückwunsch! Losnummer ${number} hat gewonnen:</p>
+      <p class="font-bold text-oac-berry">Herzlichen Glückwunsch! Losnummer ${number} hat gewonnen:</p>
       <ul class="mt-2 space-y-3">
         ${wins
           .map(
             (win) => `
           <li class="border-l-4 border-oac-orange pl-3">
             <p class="text-xs uppercase text-oac-ink/60">${escape(win.heading)}</p>
-            <p class="font-bold text-oac-navy">${escape(win.prize)}</p>
+            <p class="font-bold text-oac-berry">${escape(win.prize)}</p>
             <p class="italic text-oac-ink/80">${escape(win.sponsor)}</p>
             <p class="mt-1 text-oac-ink/60">Abzuholen bei: ${escape(win.pickupAt)}</p>
           </li>`,

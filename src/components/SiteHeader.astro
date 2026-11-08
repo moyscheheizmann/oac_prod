@@ -3,7 +3,7 @@ import { site } from "../data/site";
 import logo from "../assets/logo/ottenser-adventskalender-on-navy.svg";
 ---
 
-<header class="sticky top-0 z-40 bg-oac-navy">
+<header class="sticky top-0 z-40 bg-oac-berry">
   <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 sm:py-4">
     <a
       href="/"
@@ -41,7 +41,7 @@ import logo from "../assets/logo/ottenser-adventskalender-on-navy.svg";
     </div>
   </div>
 
-  <nav data-menu hidden class="border-t border-oac-paper/15 bg-oac-navy">
+  <nav data-menu hidden class="border-t border-oac-paper/15 bg-oac-berry">
     <ul class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 font-bold text-oac-paper">
       {/* Absolute, so the anchors still reach the home page from a subpage. */}
       <li><a class="block py-1 hover:underline" href="/#kalender">Gewinnnummern</a></li>
@@ -54,7 +54,20 @@ import logo from "../assets/logo/ottenser-adventskalender-on-navy.svg";
       <li><a class="block py-1 hover:underline" href="/kontakt">Kontakt</a></li>
     </ul>
   </nav>
+  {/* Snow lying along the bottom edge of the header. */}
+  <div aria-hidden="true" class="snow-edge pointer-events-none absolute inset-x-0 top-full h-3"></div>
 </header>
+
+<style>
+  .snow-edge {
+    background:
+      radial-gradient(circle at 12px 0, var(--color-oac-paper) 11px, transparent 12px) 0 0 / 24px 12px
+        repeat-x,
+      radial-gradient(circle at 5px 0, var(--color-oac-paper) 6px, transparent 7px) 12px 0 / 24px 9px
+        repeat-x;
+    filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.12));
+  }
+</style>
 
 <script>
   const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");

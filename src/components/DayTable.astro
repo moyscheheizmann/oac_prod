@@ -17,7 +17,7 @@ const { date, prizes } = Astro.props;
     {formatDayHeading(date)}
   </h2>
 
-  <ul class="mt-4 divide-y divide-oac-navy/15 border border-oac-navy/15 bg-white">
+  <ul class="mt-4 divide-y divide-oac-berry/15 border border-oac-berry/15 bg-white">
     {
       prizes.map((prize) => {
         const logo = logoFor(prize.logo);
@@ -31,7 +31,7 @@ const { date, prizes } = Astro.props;
 
             <div class="min-w-0">
               <p class="text-sm italic text-oac-ink/80">{prize.sponsor}</p>
-              <p class="font-bold text-oac-navy">{prize.prize}</p>
+              <p class="font-bold text-oac-berry">{prize.prize}</p>
               {prize.pickupAt && (
                 <p class="mt-1 text-sm text-oac-ink/60">
                   Abzuholen bei: {prize.pickupAt}
@@ -45,7 +45,7 @@ const { date, prizes } = Astro.props;
               cell keeps the rows aligned.
             */}
             {logo && (
-              <div class="col-span-2 flex items-center justify-center bg-oac-navy/85 p-3 sm:col-span-1">
+              <div class="col-span-2 flex items-center justify-center p-3 sm:col-span-1">
                 <Image
                   src={logo}
                   alt={prize.sponsor}

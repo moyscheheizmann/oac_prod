@@ -10,6 +10,11 @@ import { sponsorsPage } from "../data/site";
 const sponsors = (await getCollection("sponsors")).sort((a, b) =>
   a.data.name.localeCompare(b.data.name, "de"),
 );
+
+// The cards' frames cycle through the circus colours. A cycle of four
+// (not three) keeps the three-column grid from turning into one colour per
+// column: no card shares its colour with the one beside or above it.
+const frames = ["border-oac-cyan", "border-oac-red", "border-oac-cyan", "border-oac-orange"];
 ---
 
 <Layout
@@ -17,7 +22,7 @@ const sponsors = (await getCollection("sponsors")).sort((a, b) =>
   description="Alle Geschäfte und Betriebe, die den Ottenser Adventskalender mit Preisen unterstützen."
 >
   <main class="mx-auto max-w-6xl px-4 py-10">
-    <h1 class="font-display text-3xl font-bold text-oac-navy sm:text-4xl">
+    <h1 class="font-display text-3xl font-bold text-oac-berry sm:text-4xl">
       {sponsorsPage.heading}
     </h1>
     <p class="mt-4 font-display text-xl text-oac-red">{sponsorsPage.lead}</p>
@@ -25,15 +30,17 @@ const sponsors = (await getCollection("sponsors")).sort((a, b) =>
 
     <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {
-        sponsors.map((sponsor) => {
+        sponsors.map((sponsor, index) => {
           const logo = logoFor(sponsor.data.logo);
           return (
-            <li class="flex h-full flex-col overflow-hidden border border-oac-navy/15 bg-white">
+            <li
+              class={`flex h-full flex-col overflow-hidden border-[5px] bg-white ${frames[index % frames.length]}`}
+            >
               {/*
                 Sponsors without a logo carry their name in the panel instead,
                 so the name is never printed twice on the same card.
               */}
-              <div class="flex h-32 items-center justify-center bg-oac-navy/85 p-4">
+              <div class="flex h-32 items-center justify-center p-4">
                 {logo ? (
                   <Image
                     src={logo}
@@ -44,12 +51,14 @@ const sponsors = (await getCollection("sponsors")).sort((a, b) =>
                     loading="lazy"
                   />
                 ) : (
-                  <h2 class="text-center font-bold text-white">{sponsor.data.name}</h2>
+                  <h2 class="text-center font-display text-2xl text-oac-berry">
+                    {sponsor.data.name}
+                  </h2>
                 )}
               </div>
 
-              <div class="p-4">
-                {logo && <h2 class="font-bold text-oac-navy">{sponsor.data.name}</h2>}
+              <div class="border-t border-oac-ink/10 p-4">
+                {logo && <h2 class="font-bold text-oac-berry">{sponsor.data.name}</h2>}
                 {sponsor.data.address && (
                   <p class="mt-1 text-sm text-oac-ink/70">{sponsor.data.address}</p>
                 )}

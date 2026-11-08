@@ -14,11 +14,10 @@ const doors = await getDoors();
 <Layout>
   <main>
     {/*
-      Hero: welcome text beside the yearly calendar artwork, on a sky-blue
-      band that sets it off from the navy header. On phones the artwork comes
-      first.
+      Hero: welcome text beside the yearly calendar artwork, on a fir-green
+      band with a light fall of snow. On phones the artwork comes first.
     */}
-    <section class="bg-oac-sky py-6 sm:py-10">
+    <section class="hero-band py-8 sm:py-12">
       <div class="mx-auto max-w-6xl sm:px-4">
         <div class="grid overflow-hidden shadow-xl lg:grid-cols-[2fr_3fr]">
           <div
@@ -32,7 +31,7 @@ const doors = await getDoors();
               <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z" />
             </svg>
 
-            <h1 class="mt-3 font-display text-3xl font-bold text-oac-navy sm:text-4xl">
+            <h1 class="mt-3 font-display text-3xl font-bold text-oac-berry sm:text-4xl">
               {site.welcome}
             </h1>
 
@@ -61,37 +60,38 @@ const doors = await getDoors();
     <InfoTiles />
 
     <section id="kalender" class="mx-auto max-w-6xl px-4 py-10">
-      <h2 class="font-display text-3xl font-bold text-oac-navy">Die Türchen</h2>
-      <ol class="mt-4 grid grid-cols-4 gap-2 sm:grid-cols-6 lg:grid-cols-8">
+      <h2 class="font-display text-3xl font-bold text-oac-berry">Die Türchen</h2>
+      {/*
+        Türchen styled after the printed calendar: navy with yellow numbers
+        and a perforated edge. Opened doors stand ajar with light behind them
+        and link to that day's prizes; the rest stay shut.
+      */}
+      <ol class="mt-4 grid grid-cols-4 gap-3 sm:grid-cols-6 lg:grid-cols-8">
         {
-          doors.map((door) =>
-            door.open ? (
-              <li>
-                <a
-                  href={`#tag-${door.date}`}
-                  class="flex aspect-square items-center justify-center rounded bg-oac-cyan text-2xl font-bold text-white transition hover:brightness-95"
-                >
-                  {String(door.day).padStart(2, "0")}
+          doors.map((door) => {
+            const number = String(door.day);
+            return door.open ? (
+              <li class="door door-open">
+                <a href={`#tag-${door.date}`} aria-label={`Türchen ${door.day}: Gewinne ansehen`}>
+                  <span class="door-panel">{number}</span>
                 </a>
               </li>
             ) : (
-              <li>
-                <span
-                  class="flex aspect-square items-center justify-center rounded bg-oac-navy/15 text-2xl font-bold text-oac-navy/40"
-                  aria-label={`Türchen ${door.day} ist noch geschlossen`}
-                >
-                  {String(door.day).padStart(2, "0")}
+              <li class="door">
+                <span class="door-panel">
+                  <span aria-hidden="true">{number}</span>
+                  <span class="sr-only">Türchen {door.day} ist noch geschlossen</span>
                 </span>
               </li>
-            ),
-          )
+            );
+          })
         }
       </ol>
     </section>
 
     {
       days.length === 0 ? (
-        <p class="mx-auto max-w-4xl px-4 py-10 text-center font-display text-xl text-oac-navy">
+        <p class="mx-auto max-w-4xl px-4 py-10 text-center font-display text-xl text-oac-berry">
           Das erste Türchen öffnet am 1. Dezember.
         </p>
       ) : (
@@ -104,3 +104,86 @@ const doors = await getDoors();
   </main>
 
 </Layout>
+
+<style>
+  /* Fir green with scattered snowflakes, two layers offset for variety. */
+  .hero-band {
+    background-color: var(--color-oac-pine);
+    background-image:
+      radial-gradient(circle, rgb(255 255 255 / 0.55) 1.5px, transparent 2.5px),
+      radial-gradient(circle, rgb(255 255 255 / 0.35) 1px, transparent 2px);
+    background-size:
+      46px 46px,
+      29px 29px;
+    background-position:
+      0 0,
+      13px 17px;
+  }
+
+  .door {
+    position: relative;
+    aspect-ratio: 1;
+    perspective: 600px;
+    border-radius: 4px;
+  }
+
+  /* The light behind an opened door. */
+  .door-open {
+    background: radial-gradient(circle at 60% 50%, #fff6b0, var(--color-oac-orange) 75%);
+  }
+
+  .door > a {
+    display: block;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  .door > a:focus-visible {
+    outline: 3px solid var(--color-oac-berry);
+    outline-offset: 3px;
+  }
+
+  .door-panel {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: var(--color-oac-navy);
+    color: var(--color-oac-yellow);
+    /* A serif like the numbers printed on the calendar. */
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    font-variant-numeric: oldstyle-nums;
+    transform-origin: left center;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.25);
+  }
+
+  /* Perforation: a dotted cut line just inside the door's edge. */
+  .door-panel::before {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 2px dotted rgb(255 255 255 / 0.45);
+    border-radius: 2px;
+  }
+
+  .door-open .door-panel {
+    transform: rotateY(-35deg);
+    box-shadow: 4px 2px 8px rgb(0 0 0 / 0.3);
+  }
+
+  .door-open a:hover .door-panel,
+  .door-open a:focus-visible .door-panel {
+    transform: rotateY(-55deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .door-panel {
+      transition: none;
+    }
+  }
+</style>

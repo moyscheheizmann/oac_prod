@@ -1,5 +1,4 @@
-@import "@fontsource/kalam/400.css";
-@import "@fontsource/kalam/700.css";
+@import "@fontsource/handlee/400.css";
 @import "@fontsource/arimo/400.css";
 @import "@fontsource/arimo/400-italic.css";
 @import "@fontsource/arimo/700.css";
@@ -8,9 +7,12 @@
 /*
  * Design tokens for the Ottenser Adventskalender.
  *
- * Palette and typography follow the 2026 redesign mockups
- * (assets/img/front.jpeg, assets/img/tuerchen.jpeg). Kalam and Arimo are
- * carried over from the previous theme, so the lettering stays familiar.
+ * Palette and typography started from the 2026 redesign mockups
+ * (assets/img/front.jpeg, assets/img/tuerchen.jpeg) and were warmed up after
+ * client feedback: more circus and Christmas, less cool blue. Navy is kept
+ * for the Türchen, which mirror the printed calendar. Handlee is a close free
+ * match for the lettering on the calendar artwork; Arimo is carried over
+ * from the previous theme.
  */
 @theme {
   --color-oac-navy: #1f3c8e;
@@ -18,11 +20,15 @@
   --color-oac-red: #d22b25;
   --color-oac-orange: #f0a340;
 
-  --color-oac-paper: #f0f0ef;
-  --color-oac-sky: #bfe4f6;
-  --color-oac-ink: #333333;
+  /* Christmas accents. Yellow is sampled from the calendar's door numbers. */
+  --color-oac-berry: #8f1d21;
+  --color-oac-pine: #1f5c3d;
+  --color-oac-yellow: #feed00;
 
-  --font-display: "Kalam", ui-rounded, cursive;
+  --color-oac-paper: #fbf5ea;
+  --color-oac-ink: #3a302a;
+
+  --font-display: "Handlee", ui-rounded, cursive;
   --font-sans: "Arimo", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -33,6 +39,14 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-oac-ink);
+}
+
+/*
+ * Handlee only comes in one weight. Faux-bolding it smears the felt-tip
+ * strokes, so display text keeps its natural weight even under font-bold.
+ */
+.font-display {
+  font-synthesis: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
