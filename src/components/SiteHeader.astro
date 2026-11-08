@@ -1,7 +1,33 @@
 ---
 import { site } from "../data/site";
 import logo from "../assets/logo/ottenser-adventskalender-tribuehne.svg";
+import tribuehneLogo from "../assets/logo/tribuehne-logo.png";
 ---
+
+{/*
+  The organiser's logo, right at the top of the page. It scrolls away; the
+  red header below it stays. Its black lettering needs a light ground, so it
+  sits on a cream strip rather than on the red.
+*/}
+<div class="bg-oac-paper">
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-center gap-3 px-4 py-1.5 sm:justify-end"
+  >
+    <span class="text-xs text-oac-ink/70">Eine Aktion der</span>
+    <a
+      href="https://tribuehne.net/"
+      class="focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oac-berry"
+    >
+      <img
+        src={tribuehneLogo.src}
+        width={tribuehneLogo.width}
+        height={tribuehneLogo.height}
+        alt="Circusschule TriBühne"
+        class="h-10 w-auto sm:h-12"
+      />
+    </a>
+  </div>
+</div>
 
 <header class="sticky top-0 z-40 bg-oac-berry">
   <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 sm:py-4">

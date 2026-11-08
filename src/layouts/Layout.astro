@@ -4,6 +4,9 @@ import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import LosnummerSearch from "../components/LosnummerSearch.astro";
 import { getOpenDays } from "../lib/calendar";
+import { Image } from "astro:assets";
+import figuresLeft from "../assets/figures/figures-left.webp";
+import figuresRight from "../assets/figures/figures-right.webp";
 
 interface Props {
   title?: string;
@@ -31,6 +34,27 @@ const days = await getOpenDays();
     <meta name="description" content={description} />
   </head>
   <body class="bg-oac-paper">
+    {/*
+      The circus figures in Santa hats, pinned to the bottom corners of the
+      window behind all content, so they peek out in the side margins while
+      scrolling. Phones have no margins to show them in, so they start at lg.
+    */}
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 hidden lg:block">
+      <Image
+        src={figuresLeft}
+        alt=""
+        widths={[480, 960]}
+        sizes="clamp(240px, 26vw, 480px)"
+        class="absolute bottom-0 left-0 h-auto w-[clamp(240px,26vw,480px)]"
+      />
+      <Image
+        src={figuresRight}
+        alt=""
+        widths={[290, 580]}
+        sizes="clamp(145px, 15.6vw, 290px)"
+        class="absolute right-0 bottom-0 h-auto w-[clamp(145px,15.6vw,290px)]"
+      />
+    </div>
     <SiteHeader />
     <LosnummerSearch days={days} />
     <slot />
