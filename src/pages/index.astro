@@ -1,6 +1,7 @@
 ---
 import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import DoorMotif from "../components/DoorMotif.astro";
 import InfoTiles from "../components/InfoTiles.astro";
 import DayTable from "../components/DayTable.astro";
 import { getOpenDays, getDoors } from "../lib/calendar";
@@ -63,8 +64,9 @@ const doors = await getDoors();
       <h2 class="font-display text-3xl font-bold text-oac-berry">Die Türchen</h2>
       {/*
         Türchen styled after the printed calendar: navy with yellow numbers
-        and a perforated edge. Opened doors stand ajar with light behind them
-        and link to that day's prizes; the rest stay shut.
+        and a perforated edge. Opened doors swing open on their date, show a
+        small motif behind them and link to that day's prizes; the rest stay
+        shut. The nightly rebuild opens the next one.
       */}
       <ol class="mt-4 grid grid-cols-4 gap-3 sm:grid-cols-6 lg:grid-cols-8">
         {
@@ -73,6 +75,7 @@ const doors = await getDoors();
             return door.open ? (
               <li class="door door-open">
                 <a href={`#tag-${door.date}`} aria-label={`Türchen ${door.day}: Gewinne ansehen`}>
+                  <DoorMotif day={door.day} />
                   <span class="door-panel">{number}</span>
                 </a>
               </li>
@@ -133,6 +136,7 @@ const doors = await getDoors();
   }
 
   .door > a {
+    position: relative;
     display: block;
     height: 100%;
     border-radius: 4px;
@@ -172,13 +176,13 @@ const doors = await getDoors();
   }
 
   .door-open .door-panel {
-    transform: rotateY(-35deg);
+    transform: rotateY(-62deg);
     box-shadow: 4px 2px 8px rgb(0 0 0 / 0.3);
   }
 
   .door-open a:hover .door-panel,
   .door-open a:focus-visible .door-panel {
-    transform: rotateY(-55deg);
+    transform: rotateY(-75deg);
   }
 
   @media (prefers-reduced-motion: reduce) {

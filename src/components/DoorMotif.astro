@@ -1,0 +1,95 @@
+---
+/**
+ * The little picture behind an opened door: one Christmas or circus motif per
+ * day, drawn on a 48 × 48 grid. Purely decorative — the door's link carries
+ * the accessible name.
+ */
+interface Props {
+  day: number;
+}
+
+const { day } = Astro.props;
+
+const red = "#d22b25";
+const pine = "#1f5c3d";
+const navy = "#1f3c8e";
+const cyan = "#29a9dd";
+const yellow = "#feed00";
+const orange = "#f0a340";
+const berry = "#8f1d21";
+const white = "#ffffff";
+const brown = "#8a5a35";
+
+// Each entry is the SVG markup inside the 48 × 48 viewBox.
+const motifs: Record<number, string> = {
+  // Star
+  1: `<path d="M24 5l5.6 12.2 13.3 1.5-9.9 9 2.8 13.1L24 34.1 12.2 40.8 15 27.7l-9.9-9 13.3-1.5z" fill="${yellow}" stroke="${orange}" stroke-width="2" stroke-linejoin="round"/>`,
+  // Fir tree
+  2: `<path d="M24 5L13 19h6l-9 11h7l-9 10h32l-9-10h7l-9-11h6z" fill="${pine}"/><rect x="21" y="40" width="6" height="5" fill="${brown}"/><circle cx="20" cy="24" r="2" fill="${red}"/><circle cx="29" cy="32" r="2" fill="${yellow}"/><circle cx="26" cy="16" r="1.6" fill="${yellow}"/>`,
+  // Juggling balls
+  3: `<path d="M14 34a12 15 0 0 1 24 0" fill="none" stroke="${navy}" stroke-width="1.5" stroke-dasharray="2 3"/><circle cx="14" cy="36" r="6" fill="${red}"/><circle cx="24" cy="14" r="6" fill="${cyan}"/><circle cx="38" cy="34" r="6" fill="${yellow}" stroke="${orange}" stroke-width="1.5"/>`,
+  // Gift
+  4: `<rect x="9" y="20" width="30" height="22" fill="${red}"/><rect x="7" y="14" width="34" height="8" fill="${berry}"/><rect x="21" y="14" width="6" height="28" fill="${yellow}"/><path d="M24 14c-4-8-12-6-9 0zM24 14c4-8 12-6 9 0z" fill="none" stroke="${yellow}" stroke-width="3" stroke-linejoin="round"/>`,
+  // Candle
+  5: `<rect x="18" y="20" width="12" height="22" rx="1" fill="${red}"/><path d="M24 6c4 5 4 8 0 11-4-3-4-6 0-11z" fill="${orange}"/><path d="M24 10c2 3 2 4.5 0 6-2-1.5-2-3 0-6z" fill="${yellow}"/><rect x="23.2" y="17" width="1.6" height="3" fill="${berry}"/><path d="M14 42h20" stroke="${pine}" stroke-width="4" stroke-linecap="round"/>`,
+  // Circus tent
+  6: `<path d="M24 8L6 26h36z" fill="${red}"/><path d="M24 8l-6 18h4zM24 8l6 18h-4z" fill="${white}"/><rect x="9" y="26" width="30" height="16" fill="${white}"/><rect x="9" y="26" width="5" height="16" fill="${red}"/><rect x="19" y="26" width="5" height="16" fill="${red}"/><rect x="29" y="26" width="5" height="16" fill="${red}"/><path d="M20 42v-9a4 4 0 0 1 8 0v9z" fill="${navy}"/><path d="M24 8V3l6 2-6 2" fill="${yellow}" stroke="${orange}" stroke-width="1"/>`,
+  // Snowflake
+  7: `<g stroke="${cyan}" stroke-width="3" stroke-linecap="round" fill="none"><path d="M24 6v36M8.4 15l31.2 18M8.4 33l31.2-18"/><path d="M19 9l5 4 5-4M19 39l5-4 5 4M9 21l6-1-2-6M39 27l-6 1 2 6M9 27l6 1-2 6M39 21l-6-1 2-6"/></g>`,
+  // Bell
+  8: `<path d="M24 8c-8 0-11 7-11 14v8l-4 6h30l-4-6v-8c0-7-3-14-11-14z" fill="${yellow}" stroke="${orange}" stroke-width="2" stroke-linejoin="round"/><circle cx="24" cy="39" r="3.5" fill="${orange}"/><path d="M18 8c2-3 10-3 12 0" fill="none" stroke="${red}" stroke-width="3" stroke-linecap="round"/>`,
+  // Candy cane
+  9: `<path d="M30 44V16a7 7 0 0 0-14 0" fill="none" stroke="${white}" stroke-width="7" stroke-linecap="round"/><path d="M30 44V16a7 7 0 0 0-14 0" fill="none" stroke="${red}" stroke-width="7" stroke-linecap="round" stroke-dasharray="4 4"/>`,
+  // Santa hat
+  10: `<path d="M8 34c2-14 10-24 22-24 6 0 9 6 10 12l-6-2c-1 6-2 10-2 14z" fill="${red}"/><rect x="6" y="32" width="30" height="8" rx="4" fill="${white}"/><circle cx="40" cy="23" r="4.5" fill="${white}"/>`,
+  // Top hat with magic wand
+  11: `<rect x="14" y="10" width="20" height="24" rx="1" fill="${navy}"/><rect x="14" y="27" width="20" height="4" fill="${red}"/><ellipse cx="24" cy="35" rx="16" ry="4" fill="${navy}"/><path d="M34 44l8-12" stroke="${navy}" stroke-width="3" stroke-linecap="round"/><path d="M41 32l1.5-1.5" stroke="${white}" stroke-width="3" stroke-linecap="round"/><path d="M40 13l1 3 3 1-3 1-1 3-1-3-3-1 3-1z" fill="${yellow}"/>`,
+  // Moon and stars
+  12: `<path d="M30 8a16 16 0 1 0 10 26A13 13 0 0 1 30 8z" fill="${yellow}" stroke="${orange}" stroke-width="1.5"/><path d="M38 10l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z" fill="${navy}"/><path d="M42 22l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z" fill="${navy}"/>`,
+  // Heart
+  13: `<path d="M24 41S7 30 7 18a8.5 8.5 0 0 1 17-2 8.5 8.5 0 0 1 17 2c0 12-17 23-17 23z" fill="${red}"/><path d="M14 16a4 4 0 0 1 4-3" stroke="${white}" stroke-width="2.5" stroke-linecap="round" fill="none"/>`,
+  // Bauble
+  14: `<circle cx="24" cy="28" r="15" fill="${cyan}"/><path d="M10 25c9 4 19 4 28 0" stroke="${white}" stroke-width="3" fill="none"/><path d="M10.5 32c9 3 18 3 27 0" stroke="${yellow}" stroke-width="2" fill="none"/><rect x="20" y="9" width="8" height="5" rx="1" fill="${orange}"/><path d="M24 9a3 3 0 0 1 0-5" stroke="${orange}" stroke-width="1.5" fill="none"/>`,
+  // Balloons
+  15: `<path d="M17 30c0 6 4 8 7 14M31 28c0 6-4 10-7 16" stroke="${navy}" stroke-width="1.2" fill="none"/><ellipse cx="17" cy="19" rx="8" ry="10" fill="${red}"/><ellipse cx="31" cy="17" rx="8" ry="10" fill="${yellow}" stroke="${orange}" stroke-width="1.5"/><path d="M15 29l2 2 2-2zM29 27l2 2 2-2z" fill="${berry}"/>`,
+  // Gingerbread figure
+  16: `<path d="M24 6a6 6 0 0 0-3.5 10.9L11 20a3.5 3.5 0 0 0 2 6.6l6-2-4 13a3.5 3.5 0 0 0 6.5 2.4L24 33l2.5 7a3.5 3.5 0 0 0 6.5-2.4l-4-13 6 2a3.5 3.5 0 0 0 2-6.6l-9.5-3.1A6 6 0 0 0 24 6z" fill="${brown}"/><circle cx="22" cy="11" r="1" fill="${white}"/><circle cx="26" cy="11" r="1" fill="${white}"/><circle cx="24" cy="22" r="1.4" fill="${red}"/><circle cx="24" cy="27" r="1.4" fill="${red}"/><path d="M14 23l3-1M31 22l3 1" stroke="${white}" stroke-width="1.5" stroke-linecap="round"/>`,
+  // Mitten
+  17: `<path d="M16 34V18a9 9 0 0 1 18 0v4l3-3a3 3 0 0 1 4 4l-7 9v2z" fill="${red}"/><rect x="14" y="34" width="22" height="8" rx="2" fill="${white}"/><path d="M19 22l3 3 3-3 3 3 3-3" stroke="${white}" stroke-width="2" fill="none"/>`,
+  // Snowman
+  18: `<circle cx="24" cy="33" r="11" fill="${white}" stroke="${cyan}" stroke-width="1.5"/><circle cx="24" cy="16" r="7" fill="${white}" stroke="${cyan}" stroke-width="1.5"/><rect x="18" y="3" width="12" height="6" fill="${navy}"/><rect x="15" y="8" width="18" height="2.5" fill="${navy}"/><path d="M24 17l6 1.5-6 1z" fill="${orange}"/><circle cx="21.5" cy="14" r="1" fill="${navy}"/><circle cx="26.5" cy="14" r="1" fill="${navy}"/><path d="M17 23h14" stroke="${red}" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="30" r="1.2" fill="${navy}"/><circle cx="24" cy="35" r="1.2" fill="${navy}"/>`,
+  // Drum
+  19: `<path d="M9 18v16c0 4 7 7 15 7s15-3 15-7V18" fill="${red}"/><path d="M9 20l6 18M17 22l6 18M25 22l6 18M33 21l5 15" stroke="${yellow}" stroke-width="1.5" fill="none"/><ellipse cx="24" cy="18" rx="15" ry="6" fill="${white}" stroke="${navy}" stroke-width="2"/><path d="M18 4l6 12M34 5l-8 11" stroke="${brown}" stroke-width="2.5" stroke-linecap="round"/>`,
+  // Stocking
+  20: `<path d="M17 12h15v17l4 4a6 6 0 0 1-8.5 8.5L19 33a6 6 0 0 1-2-4.5z" fill="${red}"/><rect x="15" y="6" width="19" height="8" rx="2" fill="${white}"/><circle cx="24" cy="24" r="2" fill="${white}"/>`,
+  // Juggling clubs
+  21: `<g transform="translate(17 0) rotate(-18 0 26)"><path d="M0 4c6 0 7 11 3 19l-1 19h-4l-1-19C-7 15-6 4 0 4z" fill="${cyan}"/><rect x="-3.5" y="22" width="7" height="2.5" fill="${white}"/><circle cy="43" r="2.5" fill="${cyan}"/></g><g transform="translate(31 0) rotate(18 0 26)"><path d="M0 4c6 0 7 11 3 19l-1 19h-4l-1-19C-7 15-6 4 0 4z" fill="${red}"/><rect x="-3.5" y="22" width="7" height="2.5" fill="${white}"/><circle cy="43" r="2.5" fill="${red}"/></g>`,
+  // Mug of cocoa
+  22: `<path d="M10 18h22v16a8 8 0 0 1-8 8h-6a8 8 0 0 1-8-8z" fill="${red}"/><path d="M32 22h3a5 5 0 0 1 0 10h-3" fill="none" stroke="${red}" stroke-width="3"/><path d="M14 22h14" stroke="${white}" stroke-width="2"/><path d="M16 14c-2-3 2-4 0-8M22 14c-2-3 2-4 0-8M28 14c-2-3 2-4 0-8" stroke="${orange}" stroke-width="1.8" fill="none" stroke-linecap="round"/>`,
+  // Unicycle
+  23: `<circle cx="24" cy="34" r="10" fill="none" stroke="${navy}" stroke-width="3"/><path d="M24 24v20M14 34h20M17 27l14 14M31 27L17 41" stroke="${navy}" stroke-width="1"/><circle cx="24" cy="34" r="2" fill="${red}"/><path d="M24 34V9" stroke="${red}" stroke-width="3"/><path d="M16 8c4-3 12-3 16 0-4 2-12 2-16 0z" fill="${navy}"/>`,
+  // Shooting star
+  24: `<path d="M4 38l16-12M8 44l15-12M2 30l14-8" stroke="${orange}" stroke-width="2.5" stroke-linecap="round"/><path d="M30 4l4.5 9.6 10.5 1.2-7.8 7.1 2.2 10.4L30 27l-9.4 5.3 2.2-10.4L15 14.8l10.5-1.2z" fill="${yellow}" stroke="${red}" stroke-width="2" stroke-linejoin="round"/>`,
+};
+---
+
+<svg
+  class="door-motif"
+  viewBox="0 0 48 48"
+  aria-hidden="true"
+  focusable="false"
+  set:html={motifs[day] ?? motifs[1]}
+/>
+
+<style>
+  .door-motif {
+    position: absolute;
+    /* Sits right of centre: the open door, hinged left, still covers the
+       left third of the opening. */
+    top: 20%;
+    right: 5%;
+    width: 60%;
+    height: 60%;
+    filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.2));
+  }
+</style>

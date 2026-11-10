@@ -10,7 +10,7 @@ export const site = {
   welcome: "Herzlich willkommen",
   intro: [
     "Der Ottenser Adventskalender ist wieder da – prall gefüllt mit tollen Preisen von Ottenser Geschäften und aus ganz Hamburg für Ottensen und alle Anderen",
-    "Der Adventskalender „Weihnachten unter´m Circuszelt“ ist eine gemeinnützige Aktion der aTriBühne e.V. und KIDS Hamburg e.V. (Kompetenz- und Infozentrum Down-Syndrom).",
+    "Der Adventskalender „Weihnachten unter´m Circuszelt“ ist eine gemeinnützige Aktion der TriBühne e.V. und KIDS Hamburg e.V. (Kompetenz- und Infozentrum Down-Syndrom).",
     "Die Erlöse der Aktion fließen vollständig in besondere Projekte der Circusschule, die wichtige Arbeit von KIDS Hamburg e.V., sowie an die Fördervereine der teilnehmenden Schulen.",
   ],
 } as const;
@@ -75,12 +75,19 @@ export const impressum: {
   contentResponsible: null,
 };
 
+/**
+ * When the Circusbüro is closed over Christmas. Shown on the Kontakt page and
+ * in the "Wie erfahre ich…" tile.
+ *
+ * TODO(Jenny): still the 2025/26 dates — she will send this year's.
+ */
+export const officeClosedNotice =
+  "Hinweis: Vom 22.12.25 bis zum 04.01.26 ist das Circusbüro geschlossen.";
+
 /** Intro copy for the Sponsorenverzeichnis, from the current page. */
 export const sponsorsPage = {
   heading: "Sponsorenverzeichnis",
-  // The home page says "mehr als 10.000 Euro" — the two figures disagree on
-  // the current site too. Worth having the client settle on one.
-  lead: "Gewinne im Wert von über 12.000,- Euro",
+  lead: "Gewinne im Wert von über 11.000,- Euro",
   thanks:
     "… und 1001 x DANKE an alle Geschäftsleute, die uns mit Spenden so großzügig unterstützt haben.",
 } as const;
@@ -112,6 +119,9 @@ export const infoTiles: InfoTile[] = [
       "’s Fachl Ottensen",
       "Kaiser-Apotheke",
       "Victoria Apotheke",
+      "Küchenladen",
+      "WALKA",
+      // TODO(Jenny): the 2026 Mercado sales day — the date below is from 2025.
       "Am 08.11.25 im Mercado",
     ],
   },
@@ -121,24 +131,24 @@ export const infoTiles: InfoTile[] = [
     body: [
       "Jeder der 2.000 Kalender hat eine eigene Losnummer, die sich links unten im weißen Feld auf der Vorderseite des Kalenders befindet.",
       "Auf der Innenseite der 24 Kalendertürchen verbergen sich die Preise, die an die Tagesgewinner*innen verlost werden. Die Ziehung der Losnummern erfolgt unter notarieller Aufsicht und unter Ausschluss des Rechtsweges.",
-      "Insgesamt werden Preise im Wert von mehr als 10.000 Euro ausgespielt.",
+      "Insgesamt werden Preise im Wert von mehr als 11.000 Euro ausgespielt.",
     ],
   },
   {
     heading: "Wie erfahre ich, ob ich gewonnen habe?",
     color: "orange",
     body: [
-      "Die Gewinnnummern werden täglich ab dem 01.12.25 im Internet unter www.ottenser-adventskalender.de bekannt gegeben.",
+      "Die Gewinnnummern werden täglich ab dem 01.12.26 im Internet unter www.ottenser-adventskalender.de bekannt gegeben.",
       "Die Gewinnnummern können auch im Büro der Circusschule (Stresemannstr. 374b) erfragt werden.",
       "Öffnungszeiten: Di. und Do. 10:00 – 12:00 Uhr, Di. bis Fr. 15:30 – 18:30 Uhr. Telefon: 040 85157909",
-      "Hinweis: Vom 22.12.25 bis zum 04.01.26 ist das Circusbüro geschlossen.",
+      officeClosedNotice,
     ],
   },
   {
     heading: "Wichtige Hinweise",
     color: "red",
     body: [
-      "Achtung: Gewinner*innen können ihre Preise nur bis zum 15.02.26 an der im Internet genannten Adresse (Geschäft oder Circusbüro) abholen.",
+      "Achtung: Gewinner*innen können ihre Preise nur bis zum 15.02.27 an der im Internet genannten Adresse (Geschäft oder Circusbüro) abholen.",
     ],
     items: [
       "Der Kalender muss zum Entwerten mitgebracht werden",

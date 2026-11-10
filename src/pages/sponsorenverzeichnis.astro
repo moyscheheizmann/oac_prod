@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import { logoFor } from "../lib/logos";
 import { sponsorsPage } from "../data/site";
+import { sponsorWebsites } from "../data/sponsorWebsites";
 
 // Already sorted by name in the exporter; sorted again here so the page does
 // not depend on the order the JSON happens to arrive in.
@@ -32,6 +33,17 @@ const frames = ["border-oac-cyan", "border-oac-red", "border-oac-cyan", "border-
       {
         sponsors.map((sponsor, index) => {
           const logo = logoFor(sponsor.data.logo);
+          const website = sponsorWebsites[sponsor.id];
+          // The logo panel links to the sponsor's homepage when we know it.
+          const Panel = website ? "a" : "div";
+          const panelLink = website
+            ? {
+                href: website,
+                target: "_blank",
+                rel: "noopener",
+                "aria-label": `${sponsor.data.name} – Website (öffnet in neuem Tab)`,
+              }
+            : {};
           return (
             <li
               class={`flex h-full flex-col overflow-hidden border-[5px] bg-white ${frames[index % frames.length]}`}
@@ -40,7 +52,13 @@ const frames = ["border-oac-cyan", "border-oac-red", "border-oac-cyan", "border-
                 Sponsors without a logo carry their name in the panel instead,
                 so the name is never printed twice on the same card.
               */}
-              <div class="flex h-32 items-center justify-center p-4">
+              <Panel
+                {...panelLink}
+                class:list={[
+                  "sponsor-panel flex h-32 items-center justify-center p-4",
+                  website && "sponsor-link",
+                ]}
+              >
                 {logo ? (
                   <Image
                     src={logo}
@@ -55,7 +73,12 @@ const frames = ["border-oac-cyan", "border-oac-red", "border-oac-cyan", "border-
                     {sponsor.data.name}
                   </h2>
                 )}
-              </div>
+                {website && (
+                  <span aria-hidden="true" class="sponsor-link-icon">
+                    ↗
+                  </span>
+                )}
+              </Panel>
 
               <div class="border-t border-oac-ink/10 p-4">
                 {logo && <h2 class="font-bold text-oac-berry">{sponsor.data.name}</h2>}
@@ -74,3 +97,32 @@ const frames = ["border-oac-cyan", "border-oac-red", "border-oac-cyan", "border-
     </p>
   </main>
 </Layout>
+
+<style>
+  .sponsor-panel {
+    position: relative;
+  }
+
+  .sponsor-link {
+    transition: background-color 0.2s;
+  }
+
+  .sponsor-link:hover {
+    background-color: var(--color-oac-paper);
+  }
+
+  .sponsor-link:focus-visible {
+    outline: 3px solid var(--color-oac-berry);
+    outline-offset: -3px;
+  }
+
+  /* A small corner arrow marks the cards that lead off-site. */
+  .sponsor-link-icon {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.6rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--color-oac-red);
+  }
+</style>
