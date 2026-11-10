@@ -35,13 +35,13 @@ export const contact = {
 } as const;
 
 /**
- * Credits, as printed on the current site.
+ * Credits on the Kontakt page.
  *
- * NOTE: "Internetauftritt" and "Grafik" still credit the previous site. Both
- * need updating for the relaunch — the client should confirm the wording.
+ * NOTE: "Grafik" still credits the previous site; the client has not asked to
+ * change it.
  */
 export const credits: Array<{ role: string; names: string }> = [
-  { role: "Internetauftritt", names: "Louisa Klenke" },
+  { role: "Internetauftritt", names: "Victor Staack" },
   { role: "Grafik", names: "Louisa Klenke" },
   { role: "Illustration", names: "Annette Prüfer" },
   {
