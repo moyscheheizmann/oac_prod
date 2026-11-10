@@ -22,8 +22,15 @@ const prize = z.object({
   pickupAt: z.string(),
 });
 
+/**
+ * OAC_DAYS_DIR points the build at another set of day files. Only the leak
+ * check uses it, to test the date gate against last year's draw before this
+ * year's numbers exist.
+ */
+const daysDir = process.env.OAC_DAYS_DIR ?? "./src/content/days";
+
 const days = defineCollection({
-  loader: glob({ pattern: "*.json", base: "./src/content/days" }),
+  loader: glob({ pattern: "*.json", base: daysDir }),
   schema: z.object({
     /** Door number, 1–24. */
     day: z.number().int().min(1).max(24),

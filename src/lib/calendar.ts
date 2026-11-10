@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from "astro:content";
+import { calendarYear } from "../data/site";
 
 export type Day = CollectionEntry<"days">;
 
@@ -12,7 +13,7 @@ export type Day = CollectionEntry<"days">;
  * Set OAC_TODAY to preview the site on another date, e.g. to show the client
  * what the 6th will look like:
  *
- *     OAC_TODAY=2025-12-06 npm run build
+ *     OAC_TODAY=2026-12-06 npm run build
  */
 export function berlinToday(): string {
   const override = import.meta.env.OAC_TODAY;
@@ -50,19 +51,21 @@ export async function getOpenDays(today = berlinToday()): Promise<Day[]> {
 }
 
 /**
- * All 24 doors as display stubs — number, date and open state, never prizes.
+ * All 24 doors as display stubs — number, date and state, never prizes.
+ *
+ * Generated from calendarYear rather than from the day files, so a door opens
+ * on its date even if that day's numbers have not been added yet. `hasPrizes`
+ * says whether there is a prize table to link to.
  *
  * Safe to render for the full month: it deliberately carries no prize data.
  */
 export async function getDoors(
   today = berlinToday(),
-): Promise<Array<{ day: number; date: string; open: boolean }>> {
-  const days = await getCollection("days");
-  return days
-    .map(({ data }) => ({
-      day: data.day,
-      date: data.date,
-      open: isOpen(data.date, today),
-    }))
-    .sort((a, b) => a.day - b.day);
+): Promise<Array<{ day: number; date: string; open: boolean; hasPrizes: boolean }>> {
+  const opened = new Set((await getOpenDays(today)).map(({ data }) => data.date));
+  return Array.from({ length: 24 }, (_, index) => {
+    const day = index + 1;
+    const date = `${calendarYear}-12-${String(day).padStart(2, "0")}`;
+    return { day, date, open: isOpen(date, today), hasPrizes: opened.has(date) };
+  });
 }

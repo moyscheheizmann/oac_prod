@@ -14,7 +14,13 @@ import { execFileSync } from "node:child_process";
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
-const DAYS_DIR = "src/content/days";
+// This year's draw once it is in; until then (and as long as it is too small
+// to test), last year's draw kept as a fixture. OAC_DAYS_DIR overrides both.
+const REAL_DAYS = "src/content/days";
+const FIXTURE_DAYS = "scripts/fixtures/days-2024";
+const countDays = (dir) => readdirSync(dir).filter((f) => f.endsWith(".json")).length;
+const DAYS_DIR =
+  process.env.OAC_DAYS_DIR ?? (countDays(REAL_DAYS) >= 2 ? REAL_DAYS : FIXTURE_DAYS);
 const DIST = "dist";
 
 const days = readdirSync(DAYS_DIR)
@@ -33,7 +39,7 @@ const pinned = process.argv[2] ?? days[Math.floor(days.length / 2)].date;
 console.log(`Building with OAC_TODAY=${pinned} …`);
 execFileSync("npx", ["astro", "build"], {
   stdio: "inherit",
-  env: { ...process.env, OAC_TODAY: pinned },
+  env: { ...process.env, OAC_TODAY: pinned, OAC_DAYS_DIR: DAYS_DIR },
 });
 
 const numbersOn = (predicate) =>

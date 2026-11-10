@@ -49,7 +49,8 @@ const lastDay = days.at(-1);
     <h2 class="font-display text-2xl font-bold text-oac-berry">Habe ich gewonnen?</h2>
     <p class="mt-1 text-sm text-oac-ink/70">
       Die Losnummer steht links unten im weißen Feld auf der Vorderseite Ihres Kalenders.{" "}
-      {lastDay && `Geprüft werden alle Ziehungen bis zum ${formatDayHeading(lastDay.data.date)}.`}
+      {lastDay &&
+        `Geprüft werden alle bisherigen Ziehungen, also bis einschließlich ${formatDayHeading(lastDay.data.date)}.`}
     </p>
 
     <form data-search-form class="mt-4 flex gap-2">

@@ -32,7 +32,7 @@ npm run check:leak
 Preview another date without waiting for it:
 
 ```bash
-OAC_TODAY=2025-12-06 npm run build
+OAC_TODAY=2026-12-06 npm run build
 ```
 
 ## Deployment (Netlify)
@@ -89,8 +89,14 @@ date gate, so they cannot expose undrawn doors either.
 | Sponsor logos | `src/assets/sponsors/` |
 | Page copy (intro, tiles, contact, Impressum) | `src/data/site.ts` |
 
-`src/content/days/` currently holds the **2024** draw as sample data, so the
-site renders during development. Replace it with the real year before launch.
+The 24 doors are generated from `calendarYear` in `src/data/site.ts`, so they
+open on their dates even before that day's prize file exists; a door only
+links to a prize table once the file is there. **Each year:** bump
+`calendarYear`, clear `src/content/days/`, and export the new draw into it.
+
+Last year's draw lives in `scripts/fixtures/days-2024/`. The leak check uses it
+until `src/content/days/` holds at least two days, so the date gate stays tested
+before the new numbers arrive.
 
 ### Regenerating prize data
 

@@ -5,6 +5,12 @@
  * without touching markup.
  */
 
+/**
+ * The calendar's year. The 24 doors are generated from it, so they open on
+ * their dates even before the prize data for a day has been added.
+ */
+export const calendarYear = 2026;
+
 export const site = {
   title: "Ottenser Adventskalender",
   welcome: "Herzlich willkommen",
@@ -68,11 +74,11 @@ export const impressum: {
   vatId: string | null;
   contentResponsible: string | null;
 } = {
-  board: null,
-  register: null,
-  registerNumber: null,
-  vatId: null,
-  contentResponsible: null,
+  board: "Holger de Vries (1. Vorsitzender), Conny Haddorp (2. Vorsitzende), Harms Haddorp (Kassenwart)",
+  register: "Amtsgericht Hamburg",
+  registerNumber: "VR 16185",
+  vatId: "DE207960226",
+  contentResponsible: "Holger de Vries, TriBühne e.V., Stresemannstraße 374b, 22761 Hamburg",
 };
 
 /**

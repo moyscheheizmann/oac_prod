@@ -4,12 +4,13 @@ import Layout from "../layouts/Layout.astro";
 import DoorMotif from "../components/DoorMotif.astro";
 import InfoTiles from "../components/InfoTiles.astro";
 import DayTable from "../components/DayTable.astro";
-import { getOpenDays, getDoors } from "../lib/calendar";
-import { site } from "../data/site";
+import { getOpenDays, getDoors, berlinToday } from "../lib/calendar";
+import { site, calendarYear } from "../data/site";
 import calendarArt from "../assets/hero/kalender-2026.jpg";
 
 const days = await getOpenDays();
 const doors = await getDoors();
+const seasonStarted = berlinToday() >= `${calendarYear}-12-01`;
 ---
 
 <Layout>
@@ -72,12 +73,23 @@ const doors = await getDoors();
         {
           doors.map((door) => {
             const number = String(door.day);
-            return door.open ? (
+            return door.open && door.hasPrizes ? (
               <li class="door door-open">
                 <a href={`#tag-${door.date}`} aria-label={`Türchen ${door.day}: Gewinne ansehen`}>
                   <DoorMotif day={door.day} />
                   <span class="door-panel">{number}</span>
                 </a>
+              </li>
+            ) : door.open ? (
+              // Open by date, but the numbers are not in yet: nothing to link to.
+              <li class="door door-open">
+                <span class="door-link">
+                  <DoorMotif day={door.day} />
+                  <span class="door-panel">
+                    <span aria-hidden="true">{number}</span>
+                    <span class="sr-only">Türchen {door.day}: Gewinnnummern folgen in Kürze</span>
+                  </span>
+                </span>
               </li>
             ) : (
               <li class="door">
@@ -95,7 +107,9 @@ const doors = await getDoors();
     {
       days.length === 0 ? (
         <p class="mx-auto max-w-4xl px-4 py-10 text-center font-display text-xl text-oac-berry">
-          Das erste Türchen öffnet am 1. Dezember.
+          {seasonStarted
+            ? "Die Gewinnnummern folgen in Kürze."
+            : "Das erste Türchen öffnet am 1. Dezember."}
         </p>
       ) : (
         days
@@ -135,7 +149,8 @@ const doors = await getDoors();
     background: radial-gradient(circle at 60% 50%, #fff6b0, var(--color-oac-orange) 75%);
   }
 
-  .door > a {
+  .door > a,
+  .door-link {
     position: relative;
     display: block;
     height: 100%;
