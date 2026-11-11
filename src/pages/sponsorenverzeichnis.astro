@@ -55,8 +55,8 @@ const frames = ["border-oac-cyan", "border-oac-red", "border-oac-cyan", "border-
               <Panel
                 {...panelLink}
                 class:list={[
-                  "sponsor-panel flex h-32 items-center justify-center p-4",
-                  website && "sponsor-link",
+                  "logo-panel flex h-32 items-center justify-center p-4",
+                  website && "logo-link",
                 ]}
               >
                 {logo ? (
@@ -74,7 +74,7 @@ const frames = ["border-oac-cyan", "border-oac-red", "border-oac-cyan", "border-
                   </h2>
                 )}
                 {website && (
-                  <span aria-hidden="true" class="sponsor-link-icon">
+                  <span aria-hidden="true" class="logo-link-icon">
                     ↗
                   </span>
                 )}
@@ -99,25 +99,30 @@ const frames = ["border-oac-cyan", "border-oac-red", "border-oac-cyan", "border-
 </Layout>
 
 <style>
-  .sponsor-panel {
+  .logo-panel {
     position: relative;
   }
 
-  .sponsor-link {
+  .logo-link {
     transition: background-color 0.2s;
   }
 
-  .sponsor-link:hover {
+  .logo-link:hover {
     background-color: var(--color-oac-paper);
   }
 
-  .sponsor-link:focus-visible {
+  .logo-link:focus-visible {
     outline: 3px solid var(--color-oac-berry);
     outline-offset: -3px;
   }
 
-  /* A small corner arrow marks the cards that lead off-site. */
-  .sponsor-link-icon {
+  /*
+   * Class names avoid the word "sponsor": ad-block filter lists hide elements
+   * named like that, which emptied every linked card.
+   *
+   * A small corner arrow marks the cards that lead off-site.
+   */
+  .logo-link-icon {
     position: absolute;
     top: 0.4rem;
     right: 0.6rem;
